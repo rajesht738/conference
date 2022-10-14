@@ -767,6 +767,7 @@ class FrontendController extends Controller
         return view('frontend.pages.service.services')->with(['service_items' => $service_item, 'category_name' => $category_name]);
     }
 
+    
     public function work_single_page($slug)
     {
         $work_item = Works::where('slug', $slug)->first();
@@ -787,7 +788,26 @@ class FrontendController extends Controller
 
         return view('frontend.pages.works.work-single')->with(['work_item' => $work_item, 'related_works' => $all_works]);
     }
+    public function conf_single_page($slug)
+    {
+        $work_item = Works::where('slug', $slug)->first();
+        if (empty($work_item)) {
+            return view('frontend.pages.404');
+        }
+        $all_works = [];
+        $all_related_works = [];
+        if (!empty($work_item->categories_id)) {
+            foreach ($work_item->categories_id as $cat) {
+                $all_by_cat = Works::where(['lang' => get_user_lang()])->where('categories_id', 'LIKE', '%' . $work_item->$cat . '%')->take(6)->get();
+                for ($i = 0; $i < count($all_by_cat); $i++) {
+                    array_push($all_works, $all_by_cat[$i]);
+                }
+            }
+            array_unique($all_works);
+        }
 
+        return view('frontend.pages.works.conf-single')->with(['work_item' => $work_item, 'related_works' => $all_works]);
+    }
     public function about_page()
     {
         $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;

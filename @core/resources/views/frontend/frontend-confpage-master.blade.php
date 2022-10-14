@@ -1,13 +1,14 @@
 @include('frontend.partials.header')
-@php $inner_page_navbar = get_static_option('site_header_type') ? get_static_option('site_header_type') : 'navbar'; @endphp
-@include('frontend.partials.'.$inner_page_navbar)
+{{-- @php $inner_page_navbar = get_static_option('site_header_type') ? get_static_option('site_header_type') : 'navbar'; @endphp --}}
+ @php $inner_page_navbar = 'navbarconf-03' @endphp
+ @include('frontend.partials.'.$inner_page_navbar)
 <section class="breadcrumb-area breadcrumb-bg {{$inner_page_navbar}}"
 @php
     $site_breadcrumb_bg = get_attachment_image_by_id(get_static_option('site_breadcrumb_bg'),"full",false);
 @endphp
-{{-- @if (!empty($site_breadcrumb_bg))
+@if (!empty($site_breadcrumb_bg))
 style="background-image: url({{$site_breadcrumb_bg['img_url']}});"
-@endif --}}
+@endif
 >
     <div class="container">
         <div class="row">
