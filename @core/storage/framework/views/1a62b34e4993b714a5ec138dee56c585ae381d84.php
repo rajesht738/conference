@@ -13,22 +13,33 @@
             <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
                 <ul class="navbar-nav">
                     
-                    <?php echo render_menu_by_id(34); ?>
-
+                    
+                   
+                     
+                    <li>
+                        <a href="<?php echo e(url('')); ?>/work/<?php echo e(Request::segment(2)); ?>/what-we-are"> What we are</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(url('')); ?>/work/<?php echo e(Request::segment(2)); ?>/key-dates">Key Dates</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(url('')); ?>/work/<?php echo e(Request::segment(2)); ?>/ocm">OCM</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(url('')); ?>/work/<?php echo e(Request::segment(2)); ?>/abstract-submission">Abstract Submission</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(url('')); ?>/work/<?php echo e(Request::segment(2)); ?>/speakers">Speakers</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(url('')); ?>/work/<?php echo e(Request::segment(2)); ?>/venue">Venue</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(url('')); ?>/work/<?php echo e(Request::segment(2)); ?>/sponshership">Sponshership</a>
+                    </li>
                 </ul>
             </div>
-            <div class="nav-right-content">
-                <?php if(!empty(get_static_option('hide_frontend_language_change_option'))): ?>
-                    <div class="language_dropdown" id="languages_selector">
-                        <div class="selected-language"><?php echo e(get_language_name_by_slug(get_user_lang())); ?> <i class="fas fa-caret-down"></i></div>
-                        <ul>
-                            <?php $__currentLoopData = $all_language; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lang): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <li data-value="<?php echo e($lang->slug); ?>"><?php echo e($lang->name); ?></li>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </ul>
-                    </div>
-                <?php endif; ?>
-            </div>
+            
         </div>
     </nav>
     <!-- navbar area end -->

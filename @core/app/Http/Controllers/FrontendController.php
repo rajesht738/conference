@@ -788,6 +788,39 @@ class FrontendController extends Controller
 
         return view('frontend.pages.works.work-single')->with(['work_item' => $work_item, 'related_works' => $all_works]);
     }
+    public function conf_innerPage($slug, $content){
+      // dd($content);
+        $work_item = Works::where('slug', $slug)->first();
+        if (empty($work_item)) {
+            return view('frontend.pages.404');
+        }
+        $all_works = [];
+        $all_related_works = [];
+        if (!empty($work_item->categories_id)) {
+            foreach ($work_item->categories_id as $cat) {
+                $all_by_cat = Works::where(['lang' => get_user_lang()])->where('categories_id', 'LIKE', '%' . $work_item->$cat . '%')->take(6)->get();
+                for ($i = 0; $i < count($all_by_cat); $i++) {
+                    array_push($all_works, $all_by_cat[$i]);
+                }
+            }
+            array_unique($all_works);
+        }
+        if($content=="what-we-are"){
+          // dd("what we are");
+            return view('frontend.pages.works.conf-what-we-are')->with(['work_item' => $work_item, 'related_works' => $all_works]);
+        }
+        if($content=="key-dates"){
+            return view('frontend.pages.works.conf-key-date')->with(['work_item' => $work_item, 'related_works' => $all_works]);
+        }
+        if($content=="speakers"){
+            $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
+            $all_team_members = TeamMember::where('lang', $lang)->orderBy('id', 'desc')->paginate(get_static_option('team_page_team_member_section_item'));
+    
+            return view('frontend.pages.works.conf-speakers')->with(['all_team_members' => $all_team_members]);
+        }
+    //  dd($work_item);
+        return view('frontend.pages.works.conf-single')->with(['work_item' => $work_item, 'related_works' => $all_works]);
+    }
     public function conf_single_page($slug)
     {
         $work_item = Works::where('slug', $slug)->first();

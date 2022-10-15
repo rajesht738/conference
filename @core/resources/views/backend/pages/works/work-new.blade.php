@@ -54,6 +54,16 @@
                                 <div class="summernote"></div>
                             </div>
                             <div class="form-group">
+                                <label for="what_we_are">What we are</label>
+                                <input type="hidden" name="what_we_are" id="what_we_are" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="key_dates">Key Dates</label>
+                                <input type="hidden" name="key_dates" id="key_dates" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
                                 <label for="clients">{{__('Clients')}}</label>
                                 <input type="text" class="form-control"  id="clients"  name="clients" placeholder="{{__('Clients')}}">
                             </div>

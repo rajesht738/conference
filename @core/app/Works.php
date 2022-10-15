@@ -15,6 +15,8 @@ class Works extends Model
         'end_date',
         'clients',
         'description',
+        'whatweare',
+        'key_dates',
         'image',
         'gallery',
         'slug',

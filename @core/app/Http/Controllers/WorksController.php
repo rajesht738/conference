@@ -50,7 +50,7 @@ class WorksController extends Controller
             'image' => 'nullable|string|max:191',
             'meta_description' => 'nullable|string|max:191',
             'meta_tags' => 'nullable|string|max:191',
-            'status' => 'required|string|max:191',
+            'status' => 'required|string|max:191'
         ]);
         $blog_slug = !empty($request->slug) ? Str::slug($request->slug) : Str::slug($request->title);
         $check_slug = Works::where('slug',$blog_slug)->get();
@@ -70,6 +70,8 @@ class WorksController extends Controller
             'lang' => $request->lang,
             'clients' => $request->clients,
             'description' => $request->description,
+            'whatweare' => $request->what_we_are,
+            'key_dates' => $request->key_dates,
             'image' => $request->image,
             'status' => $request->status,
             'categories_id' => serialize($request->categories_id),
@@ -109,6 +111,8 @@ class WorksController extends Controller
                 'lang' => $request->lang,
                 'clients' => $request->clients,
                 'description' => $request->description,
+                'whatweare' => $request->what_we_are,
+                'key_dates' => $request->key_dates,
                 'image' => $request->image,
                 'status' => $request->status,
                 'categories_id' => serialize($request->categories_id),

@@ -12,10 +12,33 @@
             <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
                 <ul class="navbar-nav">
                     {{-- {!! render_menu_by_id($primary_menu_id) !!} --}}
-                    {!! render_menu_by_id(34) !!}
+                    {{-- {!! render_menu_by_id(34) !!} --}}
+                   
+                     
+                    <li>
+                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/what-we-are"> What we are</a>
+                    </li>
+                    <li>
+                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/key-dates">Key Dates</a>
+                    </li>
+                    <li>
+                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/ocm">OCM</a>
+                    </li>
+                    <li>
+                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/abstract-submission">Abstract Submission</a>
+                    </li>
+                    <li>
+                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/speakers">Speakers</a>
+                    </li>
+                    <li>
+                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/venue">Venue</a>
+                    </li>
+                    <li>
+                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/sponshership">Sponshership</a>
+                    </li>
                 </ul>
             </div>
-            <div class="nav-right-content">
+            {{-- <div class="nav-right-content">
                 @if(!empty(get_static_option('hide_frontend_language_change_option')))
                     <div class="language_dropdown" id="languages_selector">
                         <div class="selected-language">{{get_language_name_by_slug(get_user_lang())}} <i class="fas fa-caret-down"></i></div>
@@ -26,7 +49,7 @@
                         </ul>
                     </div>
                 @endif
-            </div>
+            </div> --}}
         </div>
     </nav>
     <!-- navbar area end -->

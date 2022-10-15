@@ -14,7 +14,7 @@
                     {!! render_menu_by_id($primary_menu_id) !!}
                 </ul>
             </div>
-            <div class="nav-right-content">
+            {{-- <div class="nav-right-content">
                 @if(!empty(get_static_option('hide_frontend_language_change_option')))
                     <div class="language_dropdown" id="languages_selector">
                         <div class="selected-language">{{get_language_name_by_slug(get_user_lang())}} <i class="fas fa-caret-down"></i></div>
@@ -25,7 +25,7 @@
                         </ul>
                     </div>
                 @endif
-            </div>
+            </div> --}}
         </div>
     </nav>
     <!-- navbar area end -->
@@ -166,7 +166,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title desktop-center margin-bottom-55">
-                    <h2 class="title">{{get_static_option('home_page_01_'.$user_select_lang_slug.'_recent_work_title')}}</h2>
+                    <h2 class="title">Upcomming Conference</h2>
                     <p>{{get_static_option('home_page_01_'.$user_select_lang_slug.'_recent_work_description')}}</p>
                 </div>
             </div>
@@ -233,7 +233,7 @@
 </div>
 @endif
 
-@if(!empty(get_static_option('home_page_price_plan_section_status')))
+{{-- @if(!empty(get_static_option('home_page_price_plan_section_status')))
 <section class="price-plan-area  padding-top-110 padding-bottom-120 gray-bg">
     <div class="container">
         <div class="row justify-content-center">
@@ -281,7 +281,7 @@
         </div>
     </div>
 </section>
-@endif
+@endif --}}
 @if(!empty(get_static_option('home_page_counterup_section_status')))
     <div class="counterup-area counterup-bg padding-top-115 padding-bottom-115"
          {!! render_background_image_markup_by_attachment_id(get_static_option('home_01_counterup_bg_image')) !!}

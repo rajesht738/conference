@@ -58,6 +58,16 @@
                                 <div class="summernote">{!! $work_item->description !!}</div>
                             </div>
                             <div class="form-group">
+                                <label for="what_we_are">What we are</label>
+                                <input type="hidden" name="what_we_are" id="what_we_are" value="{{$work_item->whatweare}}">
+                                <div class="summernote">{!! $work_item->whatweare !!}</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="key_dates">Key dates</label>
+                                <input type="hidden" name="key_dates" id="key_dates" value="{{$work_item->key_dates}}">
+                                <div class="summernote">{!! $work_item->key_dates !!}</div>
+                            </div>
+                            <div class="form-group">
                                 <label for="clients">{{__('Clients')}}</label>
                                 <input type="text" class="form-control"  id="clients"  name="clients" value="{{$work_item->clients}}">
                             </div>
