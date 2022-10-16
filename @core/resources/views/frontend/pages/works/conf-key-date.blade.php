@@ -30,7 +30,7 @@
                 <div class="col-lg-8">
                     <div class="portfolio-details-item">
                         <div class="thumb">
-                            {!! render_image_markup_by_attachment_id($work_item->image,'','large') !!}
+                            {{-- {!! render_image_markup_by_attachment_id($work_item->image,'','large') !!} --}}
                         </div>
                         <div class="post-description">
                             {!! $work_item->key_dates !!}

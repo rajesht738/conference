@@ -618,6 +618,7 @@ code {
     z-index: 0;
     background-size: cover;
     background-position: center;
+    margin-top: 88px;
 }
 
 .breadcrumb-area:before {
@@ -2317,7 +2318,7 @@ code {
     top: 0;
     width: 100%;
     z-index: 2;
-    background-color: transparent;
+    /* background-color: transparent; */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
