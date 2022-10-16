@@ -14,7 +14,7 @@
                     {!! render_menu_by_id($primary_menu_id) !!}
                 </ul>
             </div>
-            <div class="nav-right-content">
+            {{-- <div class="nav-right-content">
                 @if(!empty(get_static_option('hide_frontend_language_change_option')))
                     <div class="language_dropdown" id="languages_selector">
                         <div class="selected-language">{{get_language_name_by_slug(get_user_lang())}} <i class="fas fa-caret-down"></i></div>
@@ -25,7 +25,7 @@
                         </ul>
                     </div>
                 @endif
-            </div>
+            </div> --}}
         </div>
     </nav>
     <!-- navbar area end -->

@@ -194,7 +194,7 @@
     </div>
 </div>
 @endif
-@if(!empty(get_static_option('home_page_price_plan_section_status')))
+{{-- @if(!empty(get_static_option('home_page_price_plan_section_status')))
 <section class="price-plan-area  padding-top-110 padding-bottom-120">
     <div class="container">
         <div class="row justify-content-center">
@@ -242,7 +242,7 @@
         </div>
     </div>
 </section>
-@endif
+@endif --}}
 @if(!empty(get_static_option('home_page_counterup_section_status')))
 <div class="counterup-area counterup-bg padding-top-115 padding-bottom-115"
      {!! render_background_image_markup_by_attachment_id(get_static_option('home_01_counterup_bg_image')) !!}

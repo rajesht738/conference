@@ -64,6 +64,21 @@
                                 <div class="summernote"></div>
                             </div>
                             <div class="form-group">
+                                <label for="ocm">OCM</label>
+                                <input type="hidden" name="ocm" id="ocm" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="venue">Venue</label>
+                                <input type="hidden" name="venue" id="venue" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sponsherships">Sponshership</label>
+                                <input type="hidden" name="sponsherships" id="sponsherships" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
                                 <label for="clients">{{__('Clients')}}</label>
                                 <input type="text" class="form-control"  id="clients"  name="clients" placeholder="{{__('Clients')}}">
                             </div>

@@ -68,6 +68,21 @@
                                 <div class="summernote"><?php echo $work_item->key_dates; ?></div>
                             </div>
                             <div class="form-group">
+                                <label for="sponsherships">Sponsherships</label>
+                                <input type="hidden" name="sponsherships" id="sponsherships" value="<?php echo e($work_item->sponsherships); ?>">
+                                <div class="summernote"><?php echo $work_item->sponsherships; ?></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ocm">OCM</label>
+                                <input type="hidden" name="ocm" id="ocm" value="<?php echo e($work_item->ocm); ?>">
+                                <div class="summernote"><?php echo $work_item->ocm; ?></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="venue">Venue</label>
+                                <input type="hidden" name="venue" id="venue" value="<?php echo e($work_item->venue); ?>">
+                                <div class="summernote"><?php echo $work_item->venue; ?></div>
+                            </div>
+                            <div class="form-group">
                                 <label for="clients"><?php echo e(__('Clients')); ?></label>
                                 <input type="text" class="form-control"  id="clients"  name="clients" value="<?php echo e($work_item->clients); ?>">
                             </div>

@@ -5,7 +5,9 @@
 <?php
     $site_breadcrumb_bg = get_attachment_image_by_id(get_static_option('site_breadcrumb_bg'),"full",false);
 ?>
-
+<?php if(!empty($site_breadcrumb_bg)): ?>
+style="background-image: url(<?php echo e($site_breadcrumb_bg['img_url']); ?>);"
+<?php endif; ?>
 >
     <div class="container">
         <div class="row">

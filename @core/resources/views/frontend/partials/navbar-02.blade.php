@@ -20,7 +20,7 @@
                                     </li>
                                 @endforeach
                             </ul>
-                            @if(!empty(get_static_option('hide_frontend_language_change_option')))
+                            {{-- @if(!empty(get_static_option('hide_frontend_language_change_option')))
                                 <div class="language_dropdown" id="languages_selector">
                                     <div class="selected-language">{{get_language_name_by_slug(get_user_lang())}} <i class="fas fa-caret-down"></i></div>
                                     <ul>
@@ -29,12 +29,13 @@
                                         @endforeach
                                     </ul>
                                 </div>
-                            @endif
+                            @endif --}}
                         </div>
                         <div class="right-content">
                             <div class="request-quote">
                                 @php $quote_btn_url = !empty(get_static_option('navbar_button_custom_url_status')) ? get_static_option('navbar_button_custom_url') : route('frontend.request.quote'); @endphp
-                                <a href="{{$quote_btn_url}}" class="rq-btn blank">{{get_static_option('top_bar_'.get_user_lang().'_button_text')}} <i class="fa fa-long-arrow-right"></i></a>
+                                {{-- <a href="{{$quote_btn_url}}" class="rq-btn blank">{{get_static_option('top_bar_'.get_user_lang().'_button_text')}} <i class="fa fa-long-arrow-right"></i></a> --}}
+                                <a href="{{$quote_btn_url}}" class="rq-btn blank">Submit Abstract <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

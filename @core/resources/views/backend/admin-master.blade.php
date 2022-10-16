@@ -128,7 +128,7 @@
             <p>
                 {!! render_footer_copyright_text() !!}
             </p>
-            <p>{{__('Powered By Dizzcox v')}} - {{getenv('XGENIOUS_DIZCOXX_VERSION')}}</p>
+            <p>{{__('Powered By ')}} - Ecubes</p>
         </div>
     </footer>
 

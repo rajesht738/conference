@@ -5,9 +5,9 @@
 @php
     $site_breadcrumb_bg = get_attachment_image_by_id(get_static_option('site_breadcrumb_bg'),"full",false);
 @endphp
-{{-- @if (!empty($site_breadcrumb_bg))
+@if (!empty($site_breadcrumb_bg))
 style="background-image: url({{$site_breadcrumb_bg['img_url']}});"
-@endif --}}
+@endif
 >
     <div class="container">
         <div class="row">

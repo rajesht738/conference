@@ -16,18 +16,7 @@
 
                 </ul>
             </div>
-            <div class="nav-right-content">
-                <?php if(!empty(get_static_option('hide_frontend_language_change_option'))): ?>
-                    <div class="language_dropdown" id="languages_selector">
-                        <div class="selected-language"><?php echo e(get_language_name_by_slug(get_user_lang())); ?> <i class="fas fa-caret-down"></i></div>
-                        <ul>
-                            <?php $__currentLoopData = $all_language; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lang): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <li data-value="<?php echo e($lang->slug); ?>"><?php echo e($lang->name); ?></li>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </ul>
-                    </div>
-                <?php endif; ?>
-            </div>
+            
         </div>
     </nav>
     <!-- navbar area end -->

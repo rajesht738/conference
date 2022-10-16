@@ -16,25 +16,25 @@
                    
                      
                     <li>
-                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/what-we-are"> What we are</a>
+                        <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/what-we-are"> What we are</a>
                     </li>
                     <li>
-                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/key-dates">Key Dates</a>
+                        <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/key-dates">Key Dates</a>
                     </li>
                     <li>
-                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/ocm">OCM</a>
+                        <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/ocm">OCM</a>
                     </li>
                     <li>
-                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/abstract-submission">Abstract Submission</a>
+                        <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/abstract-submission">Abstract Submission</a>
                     </li>
                     <li>
-                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/speakers">Speakers</a>
+                        <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/speakers">Speakers</a>
                     </li>
                     <li>
-                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/venue">Venue</a>
+                        <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/venue">Venue</a>
                     </li>
                     <li>
-                        <a href="{{  url('') }}/work/{{ Request::segment(2) }}/sponshership">Sponshership</a>
+                        <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/sponshership">Sponshership</a>
                     </li>
                 </ul>
             </div>
