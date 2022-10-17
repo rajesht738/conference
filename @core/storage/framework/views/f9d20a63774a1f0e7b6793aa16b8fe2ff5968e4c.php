@@ -75,6 +75,7 @@
                                         <th><?php echo e(__('Image')); ?></th>
                                         <th><?php echo e(__('Name')); ?></th>
                                         <th><?php echo e(__('Designation')); ?></th>
+                                        
                                         <th><?php echo e(__('Action')); ?></th>
                                         </thead>
                                         <tbody>
@@ -104,6 +105,7 @@
                                                 </td>
                                                 <td><?php echo e($data->name); ?></td>
                                                 <td><?php echo e($data->designation); ?></td>
+                                                <td><?php echo e($data->conf); ?></td>
                                                 <td>
                                                     <a tabindex="0" class="btn btn-lg btn-danger btn-sm mb-3 mr-1"
                                                        role="button"
@@ -131,6 +133,7 @@
                                                        data-imageid="<?php echo e($data->image); ?>"
                                                        data-image="<?php echo e($img_url); ?>"
                                                        data-designation="<?php echo e($data->designation); ?>"
+                                                       data-conf="<?php echo e($data->conf); ?>"
                                                        data-lang="<?php echo e($data->lang); ?>"
                                                        data-iconOne="<?php echo e($data->icon_one); ?>"
                                                        data-iconTwo="<?php echo e($data->icon_two); ?>"
@@ -161,6 +164,15 @@
                         <h4 class="header-title"><?php echo e(__('New Team Member')); ?></h4>
                         <form action="<?php echo e(route('admin.team.member')); ?>" method="post" enctype="multipart/form-data">
                             <?php echo csrf_field(); ?>
+                            <div class="form-group">
+                                <label for="conference">Select Conference</label>
+                                <select name="conf" class="form-control" id="conference">
+                                    <option >Choose..</option>
+                                    <?php $__currentLoopData = $all_conference; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $conf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <option value="<?php echo e($conf->slug); ?>"><?php echo e($conf->title); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="languages"><?php echo e(__('Languages')); ?></label>
                                 <select name="lang" class="form-control" id="languages">
@@ -265,6 +277,14 @@
                     <div class="modal-body">
                         <?php echo csrf_field(); ?>
                         <input type="hidden" name="id" id="team_member_id" value="">
+                        <div class="form-group">
+                            <label for="edit_conference">Conference</label>
+                            <select name="conf" class="form-control" id="edit_conference">
+                                <?php $__currentLoopData = $all_conference; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $conf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($conf->slug); ?>"><?php echo e($conf->title); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label for="edit_languages"><?php echo e(__('Languages')); ?></label>
                             <select name="lang" class="form-control" id="edit_languages">
@@ -428,6 +448,7 @@
                 form.find('#edit_icon_two_url').val(el.data('icontwourl'));
                 form.find('#edit_icon_three_url').val(el.data('iconthreeurl'));
                 form.find('#preview_image').attr('src',image);
+                form.find('#edit_conference option[value="'+el.data('conf')+'"]').attr('selected',true);
                 form.find('#edit_languages option[value="'+el.data('lang')+'"]').attr('selected',true);
 
                 form.find('.edit_icon_three .icp-dd').attr('data-selected',el.data('iconthree'));

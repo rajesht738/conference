@@ -825,8 +825,8 @@ class FrontendController extends Controller
             return view('frontend.pages.works.conf-sponshership')->with(['work_item' => $work_item, 'related_works' => $all_works]);
         }
         if($content=="speakers"){
-            $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
-            $all_team_members = TeamMember::where('lang', $lang)->orderBy('id', 'desc')->paginate(get_static_option('team_page_team_member_section_item'));
+          //  $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
+            $all_team_members = TeamMember::where('conf', $slug)->orderBy('id', 'desc')->paginate(get_static_option('team_page_team_member_section_item'));
     
             return view('frontend.pages.works.conf-speakers')->with(['all_team_members' => $all_team_members]);
         }

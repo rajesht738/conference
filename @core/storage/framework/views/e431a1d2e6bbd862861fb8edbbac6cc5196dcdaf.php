@@ -45,4 +45,4 @@ style="background-image: url(<?php echo e($site_breadcrumb_bg['img_url']); ?>);"
 </section>
 <?php echo $__env->yieldContent('content'); ?>
 
-<?php echo $__env->make('frontend.partials.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\conference\@core\resources\views/frontend/frontend-confpage-master.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('frontend.partials.footer-conf', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\conference\@core\resources\views/frontend/frontend-confpage-master.blade.php ENDPATH**/ ?>

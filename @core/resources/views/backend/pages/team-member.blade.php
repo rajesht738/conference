@@ -75,6 +75,7 @@
                                         <th>{{__('Image')}}</th>
                                         <th>{{__('Name')}}</th>
                                         <th>{{__('Designation')}}</th>
+                                        {{-- <th>Conference</th> --}}
                                         <th>{{__('Action')}}</th>
                                         </thead>
                                         <tbody>
@@ -104,6 +105,7 @@
                                                 </td>
                                                 <td>{{$data->name}}</td>
                                                 <td>{{$data->designation}}</td>
+                                                <td>{{$data->conf}}</td>
                                                 <td>
                                                     <a tabindex="0" class="btn btn-lg btn-danger btn-sm mb-3 mr-1"
                                                        role="button"
@@ -131,6 +133,7 @@
                                                        data-imageid="{{$data->image}}"
                                                        data-image="{{$img_url}}"
                                                        data-designation="{{$data->designation}}"
+                                                       data-conf="{{$data->conf}}"
                                                        data-lang="{{$data->lang}}"
                                                        data-iconOne="{{$data->icon_one}}"
                                                        data-iconTwo="{{$data->icon_two}}"
@@ -161,6 +164,15 @@
                         <h4 class="header-title">{{__('New Team Member')}}</h4>
                         <form action="{{route('admin.team.member')}}" method="post" enctype="multipart/form-data">
                             @csrf
+                            <div class="form-group">
+                                <label for="conference">Select Conference</label>
+                                <select name="conf" class="form-control" id="conference">
+                                    <option >Choose..</option>
+                                    @foreach($all_conference as $conf)
+                                        <option value="{{$conf->slug}}">{{$conf->title}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="languages">{{__('Languages')}}</label>
                                 <select name="lang" class="form-control" id="languages">
@@ -264,6 +276,14 @@
                     <div class="modal-body">
                         @csrf
                         <input type="hidden" name="id" id="team_member_id" value="">
+                        <div class="form-group">
+                            <label for="edit_conference">Conference</label>
+                            <select name="conf" class="form-control" id="edit_conference">
+                                @foreach($all_conference as $conf)
+                                <option value="{{$conf->slug}}">{{$conf->title}}</option>
+                            @endforeach
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label for="edit_languages">{{__('Languages')}}</label>
                             <select name="lang" class="form-control" id="edit_languages">
@@ -426,6 +446,7 @@
                 form.find('#edit_icon_two_url').val(el.data('icontwourl'));
                 form.find('#edit_icon_three_url').val(el.data('iconthreeurl'));
                 form.find('#preview_image').attr('src',image);
+                form.find('#edit_conference option[value="'+el.data('conf')+'"]').attr('selected',true);
                 form.find('#edit_languages option[value="'+el.data('lang')+'"]').attr('selected',true);
 
                 form.find('.edit_icon_three .icp-dd').attr('data-selected',el.data('iconthree'));

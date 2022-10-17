@@ -45,4 +45,4 @@ style="background-image: url({{$site_breadcrumb_bg['img_url']}});"
 </section>
 @yield('content')
 
-@include('frontend.partials.footer')
+@include('frontend.partials.footer-conf')

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Language;
 use App\TeamMember;
+use App\Works;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -17,8 +18,11 @@ class TeamMemberController extends Controller
     public function index()
     {
         $all_language = Language::all();
+        $all_works = Works::all();
+       // dd($all_works);
         $all_team_member = TeamMember::all()->groupBy('lang');
-        return view('backend.pages.team-member')->with(['all_team_member' => $all_team_member,'all_languages' => $all_language]);
+
+        return view('backend.pages.team-member')->with(['all_conference'=> $all_works ,'all_team_member' => $all_team_member,'all_languages' => $all_language]);
     }
 
     public function store(Request $request)
@@ -27,6 +31,7 @@ class TeamMemberController extends Controller
             'name' => 'required|string|max:191',
             'lang' => 'required|string|max:191',
             'designation' => 'required|string|max:191',
+            'conf' => 'required|string|max:191',
             'image' => 'nullable|string|max:191',
             'icon_one' => 'nullable|string|max:191',
             'icon_two' => 'nullable|string|max:191',
@@ -35,8 +40,9 @@ class TeamMemberController extends Controller
             'icon_two_url' => 'nullable|string|max:191',
             'icon_three_url' => 'nullable|string|max:191'
         ]);
+       // dd($request->all());
         TeamMember::create($request->all());
-
+      
         return redirect()->back()->with(['msg' => __('New Team Member Added...'), 'type' => 'success']);
     }
 
@@ -48,6 +54,7 @@ class TeamMemberController extends Controller
             'name' => 'required|string|max:191',
             'lang' => 'required|string|max:191',
             'designation' => 'required|string|max:191',
+            'conf' => 'required|string|max:191',
             'image' => 'nullable|string|max:191',
             'icon_one' => 'nullable|string|max:191',
             'icon_two' => 'nullable|string|max:191',
@@ -56,7 +63,8 @@ class TeamMemberController extends Controller
             'icon_two_url' => 'nullable|string|max:191',
             'icon_three_url' => 'nullable|string|max:191'
         ]);
-        TeamMember::find($request->id)->update($request->all());
+        // dd($request->all());
+       TeamMember::find($request->id)->update($request->all());
 
         return redirect()->back()->with(['msg' => __('Key Feature Updated...'), 'type' => 'success']);
     }
