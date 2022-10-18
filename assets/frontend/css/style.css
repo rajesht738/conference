@@ -303,7 +303,7 @@ code {
 }
 
 .padding-top-115 {
-    padding-top: 115px;
+    padding-top: 40px;
 }
 
 .padding-top-120 {
@@ -371,7 +371,7 @@ code {
 }
 
 .padding-bottom-115 {
-    padding-bottom: 115px;
+    padding-bottom: 10px;
 }
 
 .padding-bottom-120 {
@@ -387,8 +387,8 @@ code {
 }
 
 .padding-120 {
-    padding-top: 50px;
-    padding-bottom: 15px;
+    padding-top: 25px;
+    padding-bottom: 0px;
 }
 
 .padding-110 {
