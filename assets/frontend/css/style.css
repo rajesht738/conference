@@ -387,8 +387,8 @@ code {
 }
 
 .padding-120 {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 .padding-110 {
@@ -2781,7 +2781,7 @@ code {
 
 .aboutus-content-block {
     background-color: #fff;
-    padding: 50px 60px 60px 60px;
+    padding: 26px 20px 15px 28px;
 }
 
 .aboutus-content-block.style-02 {
