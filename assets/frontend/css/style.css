@@ -1525,10 +1525,13 @@ code {
     width: 100%;
     text-align: right;
 }
+.page-content {
+    background: whitesmoke;
+}
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li {
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 50px;
     border-left: 1px solid #c9ab72;
