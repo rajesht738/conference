@@ -1450,6 +1450,9 @@ code {
 .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li:hover a {
     color: red;
 }
+.icon-box-one.margin-bottom-30.white {
+    margin-bottom: 0;
+}
 
 .navbar-area .nav-container {
     background-color: #fff;
@@ -2543,7 +2546,7 @@ section.blog-content-area.padding-120 {
 .header-bottom-area .right-content-area {
     background-position: top right;
     background-repeat: no-repeat;
-    padding: 60px 150px 60px 60px;
+    padding: 20px 28px 18px 30px;
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.02);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.02);
     background-color: #fff;
@@ -2563,6 +2566,7 @@ section.blog-content-area.padding-120 {
 .header-bottom-area .right-content-area .sign {
     margin-bottom: 20px;
     margin-top: 26px;
+    display: none;
 }
 
 .header-bottom-area .right-content-area .name {
