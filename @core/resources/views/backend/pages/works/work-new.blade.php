@@ -79,8 +79,8 @@
                                 <div class="summernote"></div>
                             </div>
                             <div class="form-group">
-                                <label for="clients">{{__('Clients')}}</label>
-                                <input type="text" class="form-control"  id="clients"  name="clients" placeholder="{{__('Clients')}}">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control"  id="location"  name="clients" placeholder="{{__('Clients')}}">
                             </div>
                             <div class="form-group">
                                 <label for="start_date">{{__('Start Date')}}</label>

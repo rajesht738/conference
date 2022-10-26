@@ -31,8 +31,7 @@
                 <div class="col-lg-8">
                     <div class="portfolio-details-item">
                         <div class="thumb">
-                            <?php echo render_image_markup_by_attachment_id($work_item->image,'','large'); ?>
-
+                            
                         </div>
                         <div class="post-description">
                             <?php echo $work_item->key_dates; ?>

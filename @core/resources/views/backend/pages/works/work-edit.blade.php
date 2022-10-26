@@ -83,7 +83,7 @@
                                 <div class="summernote">{!! $work_item->venue !!}</div>
                             </div>
                             <div class="form-group">
-                                <label for="clients">{{__('Clients')}}</label>
+                                <label for="location">Location</label>
                                 <input type="text" class="form-control"  id="clients"  name="clients" value="{{$work_item->clients}}">
                             </div>
                             <div class="form-group">

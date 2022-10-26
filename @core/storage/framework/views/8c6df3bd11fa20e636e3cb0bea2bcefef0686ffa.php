@@ -83,7 +83,7 @@
                                 <div class="summernote"><?php echo $work_item->venue; ?></div>
                             </div>
                             <div class="form-group">
-                                <label for="clients"><?php echo e(__('Clients')); ?></label>
+                                <label for="location">Location</label>
                                 <input type="text" class="form-control"  id="clients"  name="clients" value="<?php echo e($work_item->clients); ?>">
                             </div>
                             <div class="form-group">
