@@ -47,7 +47,7 @@
 <section class="our-cover-area padding-top-110 padding-bottom-90">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="section-title desktop-center margin-bottom-50">
                     <h2 class="title">{{get_static_option('home_page_01_'.$user_select_lang_slug.'_service_area_title')}}</h2>
                     <p>{{get_static_option('home_page_01_'.$user_select_lang_slug.'_service_area_description')}}</p>

@@ -1537,7 +1537,7 @@ section.blog-content-area.padding-120 {
 .navbar-area .nav-container .navbar-collapse .navbar-nav li {
     display: inline-block;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 50px;
     border-left: 1px solid #c9ab72;
     padding: 0px 12px;
@@ -1680,7 +1680,7 @@ section.blog-content-area.padding-120 {
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li a:hover {
-    color: var(--main-color-one);
+    color: red;
 }
 .header-charity-area .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu .menu-item-has-children:before {
     color: var(--paragraph-color);
