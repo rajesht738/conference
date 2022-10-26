@@ -92,7 +92,7 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0 6%;
     color: var(--paragraph-color);
     overflow-x: hidden;
     font-family: var(--body-font);
@@ -1525,7 +1525,9 @@ code {
     display: inline-block;
     font-size: 16px;
     font-weight: 500;
-    line-height: 90px;
+    line-height: 50px;
+    border-left: 1px solid #c9ab72;
+    padding: 0px 14px;
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li + li {
@@ -1737,6 +1739,7 @@ code {
 
     .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li:hover a {
         color: var(--main-color-one);
+        border-bottom: 1px solid blue;
     }
 
     .navbar-area .nav-container {

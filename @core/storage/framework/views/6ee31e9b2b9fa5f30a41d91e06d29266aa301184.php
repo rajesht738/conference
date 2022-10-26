@@ -30,15 +30,7 @@
     <i class="fas fa-angle-up"></i>
 </div>
 
-   <?php if(preg_match('/(xgenious)/',url('/'))): ?>
-   <div class="buy-now-wrap">
-       <ul class="buy-list">
-           <li><a target="_blank"href="https://xgenious.com/laravel/dizzcox/doc/" data-container="body" data-toggle="popover" data-placement="left" data-content="<?php echo e(__('Documentation')); ?>"><i class="far fa-file-alt"></i></a></li>
-           <li><a target="_blank"href="https://codecanyon.net/cart/add_items?item_ids=25986228"><i class="fas fa-shopping-cart"></i></a></li>
-           <li><a target="_blank"href="https://xgenious51.freshdesk.com/"><i class="fas fa-headset"></i></a></li>
-       </ul>
-   </div>
-   <?php endif; ?>
+  
     
 <?php if(!empty(get_static_option('product_module_status')) && request()->path() != 'user-home' && !request()->is('user-home/*') && cart_total_items() > 0 || request()->path() == get_static_option('product_page_slug')): ?>
     <a href="<?php echo e(route('frontend.products.cart')); ?>">
