@@ -1448,7 +1448,7 @@ code {
 }
 
 .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li:hover a {
-    color: var(--main-color-one);
+    color: red;
 }
 
 .navbar-area .nav-container {
