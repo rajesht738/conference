@@ -1525,8 +1525,13 @@ code {
     width: 100%;
     text-align: right;
 }
-.page-content {
+.page-content , .who-we-area, .image-gallery,
+.work-details-content-area
+{
     background: whitesmoke;
+}
+section.blog-content-area.padding-120 {
+    background: aliceblue;
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li {
