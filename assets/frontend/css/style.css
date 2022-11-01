@@ -1354,7 +1354,7 @@ code {
 
 .navbar-area.nav-style-02 .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a:hover {
     background-color: var(--main-color-one);
-    color: #fff;
+    color:red;
 }
 
 .navbar-area.nav-style-02 .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu .menu-item-has-children:hover > .sub-menu li:hover:before {
@@ -1374,7 +1374,7 @@ code {
 }
 
 .navbar-area.nav-style-02 .nav-container .navbar-collapse .navbar-nav li:hover a {
-    color: var(--main-color-one);
+    color: red;
 }
 
 .navbar-area.nav-style-01 {
