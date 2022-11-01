@@ -1529,7 +1529,7 @@ code {
     text-align: right;
 }
 .page-content , .who-we-area, .image-gallery,
-.work-details-content-area, .our-work-area,.latest-news
+.work-details-content-area, .our-work-area,.latest-news, .blog-details-content-area
 {
     background: whitesmoke;
 }
@@ -3004,8 +3004,8 @@ section.blog-content-area.padding-120 {
     Who We Are Area
 -----------------------------*/
 .who-we-area .left-content-area .aboutus-content-block {
-    padding: 0;
-    padding-right: 80px;
+    padding: 20px;
+   
 }
 
 /*------------------------------
