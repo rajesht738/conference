@@ -2224,7 +2224,7 @@ section.blog-content-area.padding-120 {
 
 .info-items li {
     display: inline-block;
-    margin: 0 30px;
+    margin: 0;
 }
 
 .info-items li:hover .single-info-item .content .title {

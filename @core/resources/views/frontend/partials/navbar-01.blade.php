@@ -1,4 +1,4 @@
-@if(!empty(get_static_option('home_page_support_bar_section_status')))
+@if (!empty(get_static_option('home_page_support_bar_section_status')))
     <div class="topbar-area">
         <div class="container">
             <div class="row">
@@ -6,8 +6,8 @@
                     <div class="topbar-inner">
                         <div class="left-contnet">
                             <ul class="social-icon">
-                                @foreach($all_social_item as $data)
-                                    <li><a href="{{$data->url}}"><i class="{{$data->icon}}"></i></a></li>
+                                @foreach ($all_social_item as $data)
+                                    <li><a href="{{ $data->url }}"><i class="{{ $data->icon }}"></i></a></li>
                                 @endforeach
                             </ul>
                         </div>
@@ -15,12 +15,13 @@
                             <ul class="info-menu">
                                 {!! render_menu_by_id($top_menu_id) !!}
                             </ul>
-                            @if(!empty(get_static_option('hide_frontend_language_change_option')))
+                            @if (!empty(get_static_option('hide_frontend_language_change_option')))
                                 <div class="language_dropdown" id="languages_selector">
-                                    <div class="selected-language">{{get_language_name_by_slug(get_user_lang())}} <i class="fas fa-caret-down"></i></div>
+                                    <div class="selected-language">{{ get_language_name_by_slug(get_user_lang()) }} <i
+                                            class="fas fa-caret-down"></i></div>
                                     <ul>
-                                        @foreach($all_language as $lang)
-                                        <li data-value="{{$lang->slug}}">{{$lang->name}}</li>
+                                        @foreach ($all_language as $lang)
+                                            <li data-value="{{ $lang->slug }}">{{ $lang->name }}</li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -39,21 +40,21 @@
             <div class="col-lg-12">
                 <div class="info-bar-inner">
                     <div class="logo-wrapper desktop-logo">
-                        <a href="{{url('/')}}" class="logo">
+                        <a href="{{ url('/') }}" class="logo">
                             {!! render_image_markup_by_attachment_id(get_static_option('site_logo')) !!}
                         </a>
                     </div>
                     <div class="right-content">
                         <ul class="info-items">
-                            @foreach($all_support_item as $data)
+                            @foreach ($all_support_item as $data)
                                 <li>
                                     <div class="single-info-item">
                                         <div class="icon">
-                                            <i class="{{$data->icon}}"></i>
+                                            <i class="{{ $data->icon }}"></i>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title">{{$data->title}}</h5>
-                                            <span class="details">{{$data->details}}</span>
+                                            <h5 class="title">{{ $data->title }}</h5>
+                                            <span class="details">{{ $data->details }}</span>
                                         </div>
                                     </div>
                                 </li>
@@ -61,9 +62,38 @@
                         </ul>
 
                         <div class="request-quote">
-                            @php $quote_btn_url = !empty(get_static_option('navbar_button_custom_url_status')) ? get_static_option('navbar_button_custom_url') : route('frontend.request.quote'); @endphp
-                            <a href="{{$quote_btn_url}}" class="rq-btn">{{get_static_option('top_bar_'.$user_select_lang_slug.'_button_text')}}</a>
+                            <ul class="info-items">
+                                <li>
+                                    <div class="single-info-item">
+                                        <div class="icon">
+                                            <i class="xg-flaticon-home-3"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="title">Office:</h5>
+                                            <p class=""
+                                                style="
+                                        padding: 0px !important;
+                                        margin: 0;
+                                        font-size: 12px;
+                                    ">
+                                                98z St. Paul St, N1 7DZ, </p>
+                                            <p class=""
+                                                style="
+                                        padding: 0px !important;
+                                        margin: 0;
+                                        font-size: 12px;
+                                    ">
+                                                Hackney, London, United Kingdom.</p>
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+                        {{-- <div class="request-quote"> --}}
+                        {{-- @php $quote_btn_url = !empty(get_static_option('navbar_button_custom_url_status')) ? get_static_option('navbar_button_custom_url') : route('frontend.request.quote'); @endphp --}}
+                        {{-- <a href="{{$quote_btn_url}}" class="rq-btn">{{get_static_option('top_bar_'.$user_select_lang_slug.'_button_text')}}</a> --}}
+                        {{-- </div> --}}
 
                     </div>
                 </div>
@@ -75,11 +105,12 @@
     <div class="container nav-container">
         <div class="responsive-mobile-menu">
             <div class="logo-wrapper mobile-logo">
-                <a href="{{url('/')}}" class="logo">
+                <a href="{{ url('/') }}" class="logo">
                     {!! render_image_markup_by_attachment_id(get_static_option('site_logo')) !!}
                 </a>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
