@@ -1,3 +1,8 @@
+const second = document.querySelector('.navbar-nav li:nth-child(4) > a');
+second.setAttribute("target", "_blank");
+
+
+
 ;(function($){
     "use strict";
 
