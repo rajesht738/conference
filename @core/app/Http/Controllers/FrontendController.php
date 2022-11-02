@@ -966,6 +966,18 @@ class FrontendController extends Controller
     }
 
 
+    public function category_wise_works($id)
+    {
+
+        $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
+        $category = WorksCategory::find($id);
+        $all_works = Works::where(['lang' => $lang, 'status' => 'publish'])->where('categories_id', 'LIKE', '%' . $id . '%')->paginate(12);
+        $category_name = $category->name;
+        $all_category = WorksCategory::where('lang', $lang)->get();
+
+        return view('frontend.pages.works.work-category-upcoming')->with(['all_work' => $all_works, 'category_name' => $category_name, 'all_work_category' => $all_category]);
+
+    }
     public function category_wise_works_page($id)
     {
 

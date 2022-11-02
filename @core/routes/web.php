@@ -155,7 +155,10 @@ Route::group(['middleware' => ['setlang','globalVariable','module_permission:blo
 //works frontend
 Route::group(['middleware' => ['setlang','globalVariable','module_permission:works']],function (){
     $work_page_slug = !empty(get_static_option('work_page_slug')) ? get_static_option('work_page_slug') : 'work';
+   
     Route::get('/'.$work_page_slug,'FrontendController@work_page')->name('frontend.work');
+    Route::get('/'.$work_page_slug. '/{id}','FrontendController@category_wise_works')->name('frontend.catwork_page');
+   
     Route::get('/'.$work_page_slug.'-category/{id}/{any}','FrontendController@category_wise_works_page')->name('frontend.works.category');
    // Route::get('/'.$work_page_slug.'/{slug}','FrontendController@work_single_page')->name('frontend.work.single');
     Route::get('/'.$work_page_slug.'/{slug}','FrontendController@conf_single_page')->name('frontend.work.single');

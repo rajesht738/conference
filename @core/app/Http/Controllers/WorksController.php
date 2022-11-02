@@ -19,6 +19,7 @@ class WorksController extends Controller
 
     public function index()
     {
+        // $all_works = Works::all()->where('slug',$work_item->slug)->groupBy('lang');
         $all_works = Works::all()->groupBy('lang');
         return view('backend.pages.works.index')->with([
             'all_works' => $all_works
