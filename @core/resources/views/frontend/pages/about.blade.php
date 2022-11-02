@@ -19,21 +19,7 @@
                             <h4 class="title">{{get_static_option('about_page_'.$user_select_lang_slug.'_about_section_title')}}</h4>
                             <p>{{get_static_option('about_page_'.$user_select_lang_slug.'_about_section_description')}}</p>
                         </div>
-                        <div class="row">
-                            @foreach($all_service as $data)
-                            <div class="col-lg-6">
-                                <div class="icon-box-three margin-bottom-25">
-                                    <div class="icon">
-                                        <i class="{{$data->icon}}"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">{{$data->title}}</h4>
-                                        <p>{{$data->excerpt}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
+                
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -41,6 +27,21 @@
                         {!! render_image_markup_by_attachment_id(get_static_option('about_page_'.$user_select_lang_slug.'_about_section_right_image')) !!}
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                @foreach($all_service as $data)
+                <div class="col-lg-6">
+                    <div class="icon-box-three margin-bottom-25">
+                        <div class="icon">
+                            <i class="{{$data->icon}}"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title">{{$data->title}}</h4>
+                            <p>{{$data->excerpt}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>

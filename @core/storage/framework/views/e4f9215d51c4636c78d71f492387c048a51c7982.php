@@ -20,21 +20,7 @@
                             <h4 class="title"><?php echo e(get_static_option('about_page_'.$user_select_lang_slug.'_about_section_title')); ?></h4>
                             <p><?php echo e(get_static_option('about_page_'.$user_select_lang_slug.'_about_section_description')); ?></p>
                         </div>
-                        <div class="row">
-                            <?php $__currentLoopData = $all_service; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <div class="col-lg-6">
-                                <div class="icon-box-three margin-bottom-25">
-                                    <div class="icon">
-                                        <i class="<?php echo e($data->icon); ?>"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title"><?php echo e($data->title); ?></h4>
-                                        <p><?php echo e($data->excerpt); ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </div>
+                
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -43,6 +29,21 @@
 
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <?php $__currentLoopData = $all_service; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="col-lg-6">
+                    <div class="icon-box-three margin-bottom-25">
+                        <div class="icon">
+                            <i class="<?php echo e($data->icon); ?>"></i>
+                        </div>
+                        <div class="content">
+                            <h4 class="title"><?php echo e($data->title); ?></h4>
+                            <p><?php echo e($data->excerpt); ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>
