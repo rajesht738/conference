@@ -32,7 +32,7 @@
             </div>
             <div class="row">
                 <?php $__currentLoopData = $all_service; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="icon-box-three margin-bottom-25">
                         <div class="icon">
                             <i class="<?php echo e($data->icon); ?>"></i>

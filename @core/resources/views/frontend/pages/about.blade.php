@@ -30,7 +30,7 @@
             </div>
             <div class="row">
                 @foreach($all_service as $data)
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="icon-box-three margin-bottom-25">
                         <div class="icon">
                             <i class="{{$data->icon}}"></i>
