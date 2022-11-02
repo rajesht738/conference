@@ -97,10 +97,13 @@
                             <div class="col-md-10"
                                 style="text-align: left;font-weight: 700;
                             font-size: 30px;">
-                                <i class="{{ $data->icon }}"></i> <a
-                                    href="{{ route('frontend.services.single', $data->slug) }}">
+                                <i class="{{ $data->icon }}"></i>
+                                 {{-- <a href="{{ route('frontend.services.single', $data->slug) }}">
                                     {{ $data->title }}
-                                </a>
+                                </a> --}}
+                                 
+                                    {{ $data->title }}
+                                
                             </div>
                         </div>
                         <hr style="

@@ -78,7 +78,7 @@
 
 <?php if(!empty(get_static_option('home_page_service_section_status'))): ?>
     <section class="our-cover-area section-bg-1 padding-top-110 padding-bottom-90" style="
-    padding-top: 25% !important;
+    padding-top: 2% !important;
 ">
         <div class="container">
             
@@ -90,11 +90,12 @@
                             <div class="col-md-10"
                                 style="text-align: left;font-weight: 700;
                             font-size: 30px;">
-                                <i class="<?php echo e($data->icon); ?>"></i> <a
-                                    href="<?php echo e(route('frontend.services.single', $data->slug)); ?>">
+                                <i class="<?php echo e($data->icon); ?>"></i>
+                                 
+                                 
                                     <?php echo e($data->title); ?>
 
-                                </a>
+                                
                             </div>
                         </div>
                         <hr style="
