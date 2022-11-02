@@ -74,9 +74,11 @@
 </div>
 
 @if (!empty(get_static_option('home_page_service_section_status')))
-    <section class="our-cover-area section-bg-1 padding-top-110 padding-bottom-90">
+    <section class="our-cover-area section-bg-1 padding-top-110 padding-bottom-90" style="
+    padding-top: 25% !important;
+">
         <div class="container">
-            <div class="row justify-content-center">
+            {{-- <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title desktop-center margin-bottom-55">
                         <h2 class="title">
@@ -86,7 +88,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="row">
                 @foreach ($all_service as $data)
                     <div class="col-lg-4 col-md-6">

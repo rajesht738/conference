@@ -77,21 +77,11 @@
 </div>
 
 <?php if(!empty(get_static_option('home_page_service_section_status'))): ?>
-    <section class="our-cover-area section-bg-1 padding-top-110 padding-bottom-90">
+    <section class="our-cover-area section-bg-1 padding-top-110 padding-bottom-90" style="
+    padding-top: 25% !important;
+">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-title desktop-center margin-bottom-55">
-                        <h2 class="title">
-                            <?php echo e(get_static_option('home_page_01_' . $user_select_lang_slug . '_service_area_title')); ?>
-
-                        </h2>
-                        <p><?php echo e(get_static_option('home_page_01_' . $user_select_lang_slug . '_service_area_description')); ?>
-
-                        </p>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row">
                 <?php $__currentLoopData = $all_service; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-lg-4 col-md-6">
