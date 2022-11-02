@@ -75,7 +75,7 @@
 
 @if (!empty(get_static_option('home_page_service_section_status')))
     <section class="our-cover-area section-bg-1 padding-top-110 padding-bottom-90" style="
-    padding-top: 25% !important;
+    padding-top: 2% !important;
 ">
         <div class="container">
             {{-- <div class="row justify-content-center">
