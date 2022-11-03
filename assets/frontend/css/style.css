@@ -1548,6 +1548,7 @@ section.blog-content-area.padding-120 {
 }
 .navbar-area .nav-container .navbar-collapse .navbar-nav li:hover {
     border-top: 1px solid blue;
+    margin-top: -1px;
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li + li {
