@@ -1529,7 +1529,8 @@ code {
     text-align: right;
 }
 .page-content , .who-we-area, .image-gallery,
-.work-details-content-area, .our-work-area,.latest-news, .blog-details-content-area, .dynamic-page-content-area
+.work-details-content-area, .our-work-area,
+.latest-news, .blog-details-content-area, .dynamic-page-content-area,.order-service-page-content-area
 {
     background: whitesmoke;
 }
@@ -6470,7 +6471,7 @@ background: var(--main-color-one);
 }
 
 .contact-form .form-group .form-control {
-    background-color: #f4f7fc;
+    /* background-color: #f4f7fc; */
     height: 50px;
     border: none;
     padding: 0 20px;
