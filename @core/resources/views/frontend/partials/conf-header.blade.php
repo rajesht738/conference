@@ -81,7 +81,7 @@
     @endif
     {!! get_static_option('site_header_script') !!}
 </head>
-<body class="dizzcox_version_{{getenv('XGENIOUS_DIZCOXX_VERSION')}} {{get_static_option('item_license_status')}} apps_key_{{getenv('XGENIOUS_API_KEY')}} mainBody ">
+<body class="dizzcox_version_{{getenv('XGENIOUS_DIZCOXX_VERSION')}} {{get_static_option('item_license_status')}} apps_key_{{getenv('XGENIOUS_API_KEY')}} confBody ">
 @include('frontend.partials.preloader')
 @if(auth()->guard('admin')->check())
     <div class="dizzcox_admin_bar">

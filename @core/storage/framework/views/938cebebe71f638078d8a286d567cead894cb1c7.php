@@ -84,7 +84,7 @@
     <?php echo get_static_option('site_header_script'); ?>
 
 </head>
-<body class="dizzcox_version_<?php echo e(getenv('XGENIOUS_DIZCOXX_VERSION')); ?> <?php echo e(get_static_option('item_license_status')); ?> apps_key_<?php echo e(getenv('XGENIOUS_API_KEY')); ?> mainBody ">
+<body class="dizzcox_version_<?php echo e(getenv('XGENIOUS_DIZCOXX_VERSION')); ?> <?php echo e(get_static_option('item_license_status')); ?> apps_key_<?php echo e(getenv('XGENIOUS_API_KEY')); ?> confBody ">
 <?php echo $__env->make('frontend.partials.preloader', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php if(auth()->guard('admin')->check()): ?>
     <div class="dizzcox_admin_bar">
@@ -118,4 +118,4 @@
 <?php endif; ?>
 
 
-<?php /**PATH C:\laragon\www\conference\@core\resources\views/frontend/partials/header.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laragon\www\conference\@core\resources\views/frontend/partials/conf-header.blade.php ENDPATH**/ ?>
