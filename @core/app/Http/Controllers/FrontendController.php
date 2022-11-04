@@ -883,6 +883,18 @@ class FrontendController extends Controller
         return view('frontend.pages.service.service')->with(['all_services' => $all_services, 'all_price_plan' => $all_price_plan]);
     }
 
+    public function conf_work_page()
+    {
+        $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
+        $all_work = Works::where(['lang' => $lang, 'status' => 'publish'])->orderBy('id', 'desc')->paginate(get_static_option('work_page_items'));
+        $all_contain_cat = [];
+        foreach ($all_work as $work) {
+            array_push($all_contain_cat, $work->categories_id);
+        }
+        $all_work_category = WorksCategory::find($all_contain_cat);
+
+        return view('frontend.pages.works.work')->with(['all_work' => $all_work, 'all_work_category' => $all_work_category]);
+    }
     public function work_page()
     {
         $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
