@@ -23,7 +23,7 @@
                             <span>@lang('dashboard')</span>
                         </a>
                     </li>
-{{--                    @if(check_page_permission('admin_role_manage'))--}}
+                 @if(check_page_permission('admin_role_manage'))
                         <li
                                 class="main_dropdown
                         {{active_menu('admin-home/new-user')}}
@@ -42,7 +42,7 @@
                                             href="{{route('admin.all.user.role')}}">{{__('All Admin Role')}}</a></li>
                             </ul>
                         </li>
-{{--                    @endif--}}
+                  @endif
                     {{--                    @if(check_page_permission_by_string('Widgets Manage'))--}}
                     <li
                             class="main_dropdown
@@ -838,19 +838,19 @@
                             <a href="javascript:void(0)"
                                aria-expanded="true">
                                 <i class="ti-layout"></i>
-                                <span>{{__('Works')}}</span>
+                                <span>Conferences</span>
                             </a>
                             <ul class="collapse">
                                 <li class="{{active_menu('admin-home/works')}}">
-                                    <a href="{{route('admin.work')}}">{{__('All Works')}}</a></li>
+                                    <a href="{{route('admin.work')}}">All Conferences</a></li>
                                 <li class="{{active_menu('admin-home/works/new')}}">
-                                    <a href="{{route('admin.work.new')}}">{{__('New Works')}}</a></li>
+                                    <a href="{{route('admin.work.new')}}">New Conference</a></li>
                                 <li class="{{active_menu('admin-home/works/category')}}">
-                                    <a href="{{route('admin.work.category')}}">{{__('Category')}}</a></li>
+                                    <a href="{{route('admin.work.category')}}">Conference Category</a></li>
                                 <li class="{{active_menu('admin-home/works/work-page-settings')}}">
-                                    <a href="{{route('admin.work.page.settings')}}">{{__('Work Page Manage')}}</a></li>
+                                    <a href="{{route('admin.work.page.settings')}}">Conference Page Manage</a></li>
                                 <li class="{{active_menu('admin-home/works/single-page-settings')}}">
-                                    <a href="{{route('admin.work.single.page.settings')}}">{{__('Work Single Page Manage')}}</a></li>
+                                    <a href="{{route('admin.work.single.page.settings')}}">Conference Single Page Manage</a></li>
                             </ul>
                         </li>
                     @endif

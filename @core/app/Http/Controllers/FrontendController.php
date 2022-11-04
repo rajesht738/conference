@@ -850,8 +850,9 @@ class FrontendController extends Controller
             }
             array_unique($all_works);
         }
+        $all_team_members = TeamMember::where('conf', $slug)->orderBy('id', 'desc')->paginate(get_static_option('team_page_team_member_section_item'));
 
-        return view('frontend.pages.works.conf-single')->with(['work_item' => $work_item, 'related_works' => $all_works]);
+        return view('frontend.pages.works.conf-single')->with(['work_item' => $work_item, 'related_works' => $all_works, 'all_team_members' => $all_team_members]);
     }
     public function about_page()
     {

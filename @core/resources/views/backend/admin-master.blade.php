@@ -58,7 +58,7 @@
 </div>
 @endif
 <div class="page-container">
-    @include('backend/partials/sidebar')
+    @include('backend/partials/_sidebar')
     <div class="main-content">
         <!-- header area start -->
         <div class="header-area">

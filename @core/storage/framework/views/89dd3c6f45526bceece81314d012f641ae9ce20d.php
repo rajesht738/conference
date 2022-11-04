@@ -32,10 +32,12 @@
             <?php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; ?>
             <?php if(!empty($gallery_item)): ?>
                 <div class="case-study-gallery-wrapper margin-bottom-30 margin-top-40">
-                      <div class="case-study-gallery-carousel owl-carousel">
+                    <div class="case-study-gallery-carousel owl-carousel">
+
                         <?php $__currentLoopData = $gallery_item; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gall): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="single-gallery-item">
-                                <div style="position: absolute;
+                                <div id="slideButton"
+                                    style="position: absolute;
                                 z-index: 1;
                                 display: flex;
                                 justify-content: center;
@@ -44,26 +46,9 @@
                                 height: 100%;
                                 gap: 5px;
                                 ">
-                               
-                                    <p class="font-italic fs-2 mb-3" data-zanim-xs="{&quot;animation&quot;:&quot;slide-left&quot;,&quot;delay&quot;:0.8,&quot;duration&quot;:0.5}" style="opacity: 0; transform: matrix(1, 0, 0, 1, 70, 0);">Theme: "next-generation vaccines treatment and diagnostics that save lives"</p>
-                                    <h3 class="text-uppercase text-white font-weight-bold ls-1" data-zanim-xs="{&quot;animation&quot;:&quot;slide-right&quot;,&quot;delay&quot;:0.6,&quot;duration&quot;:0.5}" style="opacity: 0; transform: matrix(1, 0, 0, 1, -70, 0);">Vaccines Summit <span style="
-                    color: #FC08E7;">- 2022</span></h3>
-                                    <p class="lead text-sans-serif ls font-weight-extra-light mt-5" data-zanim-xs="{&quot;animation&quot;:&quot;zoom-in&quot;,&quot;delay&quot;:0.8,&quot;duration&quot;:0.5}" style="filter: blur(5px); opacity: 0; transform: matrix(0.9, 0, 0, 0.9, 0, 0);">Sheraton Reston Hotel,
-                Reston, VA<br>October 11-13, 2022</p><!--<a class="btn btn-danger btn-lg mt-3" href="#price" data-fancyscroll="data-fancyscroll" data-zanim-xs='{"animation":"zoom-in","delay":0.8,"duration":0.5}' data-zanim-trigger="scroll">get your pass now !</a> <a class="btn btn-danger btn-lg mt-3" href="abstract-submission" data-fancyscroll="data-fancyscroll" data-zanim-xs='{"animation":"zoom-in","delay":0.8,"duration":0.5}' data-zanim-trigger="scroll">Submit Abstract</a>--> <a class="btn btn-danger btn-lg mt-3" href="assets/pdfs/Final-Program-2022.pdf" target="_blank" data-fancyscroll="data-fancyscroll" data-zanim-xs="{&quot;animation&quot;:&quot;zoom-in&quot;,&quot;delay&quot;:0.8,&quot;duration&quot;:0.5}" style="filter: blur(5px); opacity: 0; transform: matrix(0.9, 0, 0, 0.9, 0, 0);">Final Program-2022</a> <a class="btn btn-danger btn-lg mt-3" href="presentation-submission" target="_blank" data-fancyscroll="data-fancyscroll" data-zanim-xs="{&quot;animation&quot;:&quot;zoom-in&quot;,&quot;delay&quot;:0.8,&quot;duration&quot;:0.5}" style="filter: blur(5px); opacity: 0; transform: matrix(0.9, 0, 0, 0.9, 0, 0);">Submit Presentation</a>
-                                  </div>
-
-                               <div style="position: absolute;
-                               z-index: 1;
-                               display: flex;
-                               justify-content: center;
-                               align-items: center;
-                               width: 100%;
-                               height: 100%;
-                               gap: 5px;
-                               ">
-                                <button class="btn btn-boxed btn-primary">Final Programm 2022</button>
-                                <button class="btn btn-boxed btn-primary">Submit Abstract</button>
-                            </div> 
+                                    <button class="btn btn-boxed btn-primary">Final Programm 2022</button>
+                                    <button class="btn btn-boxed btn-primary">Submit Abstract</button>
+                                </div>
                                 <?php echo render_image_markup_by_attachment_id($gall); ?>
 
                             </div>
@@ -77,14 +62,71 @@
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
     <div class="work-details-content-area padding-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="portfolio-details-item">
-                        <div class="thumb">
-                            <?php echo render_image_markup_by_attachment_id($work_item->image, '', 'large'); ?>
+        <div class="row">
+            <div class="col-lg-12"
+                style="border-top: 5px solid #ffffa6;
+            border-bottom: 5px solid #f5f5bb;padding-left: 20%;background: #054a33;">
+                <?php echo $work_item->sponsherships; ?>
+
+            </div>
+        </div>
+
+        <div class="row" style="background: #054a33;">
+            <div class="container">
+                <div class="row" style="padding-top: 75px;">
+                    <?php $__currentLoopData = $all_team_members; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="row" style="padding: 12px;">
+                                <div class="col-md-6">
+                                    <div class="thumb">
+                                        <?php echo render_image_markup_by_attachment_id($data->image, 'grid'); ?>
+
+                                        <div class="hover">
+                                            <ul class="social-icon">
+                                                <?php if(!empty($data->icon_one) && !empty($data->icon_one_url)): ?>
+                                                    <li><a href="<?php echo e($data->icon_one_url); ?>"><i
+                                                                class="<?php echo e($data->icon_one); ?>"></i></a></li>
+                                                <?php endif; ?>
+                                                <?php if(!empty($data->icon_two) && !empty($data->icon_two_url)): ?>
+                                                    <li><a href="<?php echo e($data->icon_two_url); ?>"><i
+                                                                class="<?php echo e($data->icon_two); ?>"></i></a></li>
+                                                <?php endif; ?>
+                                                <?php if(!empty($data->icon_three) && !empty($data->icon_three_url)): ?>
+                                                    <li><a href="<?php echo e($data->icon_three_url); ?>"><i
+                                                                class="<?php echo e($data->icon_three); ?>"></i></a></li>
+                                                <?php endif; ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p class="name" style="font-size: 18px; color:white"><?php echo e($data->name); ?></p>
+                                        <span class="post"><?php echo e($data->designation); ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <div class="col-lg-12">
+                        <div class="pagination-wrapper">
+                            <?php echo e($all_team_members->links()); ?>
 
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" style="padding-right: 45px;">
+                    <div class="portfolio-details-item">
+                        <p style="font-size: 34px;
+                       font-weight: 600; color: blue;">About us</p>
                         <div class="post-description">
                             <?php echo $work_item->description; ?>
 
@@ -92,86 +134,33 @@
 
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="project-widget">
-                        <div class="project-info-item">
-                            <h4 class="title">
-                                <?php echo e(get_static_option('work_single_page_' . $user_select_lang_slug . '_sidebar_title')); ?></h4>
-                            <ul>
-                                <li><?php echo e(get_static_option('work_single_page_' . $user_select_lang_slug . '_start_date_text')); ?>
+                <div class="col-lg-6" style="padding-left: 45px;">
 
-                                    <span class="right"><?php echo e($work_item->start_date); ?> </span></li>
-                                <li><?php echo e(get_static_option('work_single_page_' . $user_select_lang_slug . '_end_date_text')); ?>
-
-                                    <span class="right"> <?php echo e($work_item->end_date); ?></span></li>
-                                <li><?php echo e(get_static_option('work_single_page_' . $user_select_lang_slug . '_clients_text')); ?>
-
-                                    <span class="right"><?php echo e($work_item->clients); ?> </span></li>
-                                <li><?php echo e(get_static_option('work_single_page_' . $user_select_lang_slug . '_category_text')); ?>
-
-                                    <span class="right">
-                                        <?php
-                                            $all_cat_of_post = get_work_category_by_id($work_item->id);
-                                        ?>
-                                        <?php if(!empty($all_cat_of_post)): ?>
-                                            <?php $__currentLoopData = $all_cat_of_post; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $work_cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <a
-                                                    href="<?php echo e(route('frontend.works.category', ['id' => $key, 'any' => Str::slug($work_cat)])); ?>"><?php echo e($work_cat); ?></a>
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                        <?php endif; ?>
-                                    </span>
-                                </li>
-                            </ul>
-                            <div class="share-area">
-                                <h4 class="title">
-                                    <?php echo e(get_static_option('work_single_page_' . $user_select_lang_slug . '_share_text')); ?></h4>
-                                <ul class="share-icon">
-                                    <?php echo single_post_share(
-                                        route('frontend.work.single', $work_item->slug),
-                                        $work_item->title,
-                                        get_attachment_image_url_by_id($work_item->image),
-                                    ); ?>
-
-                                </ul>
-                            </div>
-                        </div>
+                    <p style="font-size: 34px;
+                    font-weight: 600; color: blue;">Why do attend?</p>
+                    <div class="post-description">
+                       <p> Vaccines Summit-2022 delivers unlimited opportunities for making business deals, product
+                        enhancements, cutting edge solutions for improving and elevating the company’s business and
+                        partnership. The conference provides a unique platform for all the leading industry professionals,
+                        institutional investors, capitalists, corporate investors and business development executives to
+                        have private One-to-One meetings with elite business representatives which increase the chances of
+                        marketing in this networking world.
+                       </p>
+                        <h2>Who can attend?</h2>
+                        <ul>
+                        <li>Government and non-government officials</li>
+                            <li> C-Level Executives</li>
+                                <li>Decision Makers</li>
+                                    <li>Vice Presidents</li>
+                                        <li> Drug developers</li>
+                                            <li> Academician</li>
+                                                <li>Researchers & Developers</li>
+                                                    <li>Directors</li>
+                                                        <li>Healthcare professionals</li>
+                        </ul>
+                       
                     </div>
                 </div>
-                <?php if(!empty($related_works)): ?>
-                    <div class="col-lg-12">
-                        <div class="related-work-area padding-top-100">
-                            <div class="section-title margin-bottom-55">
-                                <h2 class="title">
-                                    <?php echo e(get_static_option('work_single_page_' . $user_select_lang_slug . '_related_work_title')); ?>
-
-                                </h2>
-                            </div>
-                            <div class="our-work-carousel">
-                                <?php $__currentLoopData = $related_works; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <div class="single-work-item">
-                                        <div class="thumb">
-                                            <?php echo render_image_markup_by_attachment_id($data->image, '', 'grid'); ?>
-
-                                        </div>
-                                        <div class="content">
-                                            <h4 class="title"><a href="<?php echo e(route('frontend.work.single', $data->slug)); ?>">
-                                                    <?php echo e($data->title); ?></a></h4>
-                                            <div class="cats">
-                                                <?php
-                                                    $all_cat_of_post = get_work_category_by_id($data->id);
-                                                ?>
-                                                <?php $__currentLoopData = $all_cat_of_post; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $work_cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                    <a
-                                                        href="<?php echo e(route('frontend.works.category', ['id' => $key, 'any' => Str::slug($work_cat)])); ?>"><?php echo e($work_cat); ?></a>
-                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
             </div>
         </div>
     </div>
