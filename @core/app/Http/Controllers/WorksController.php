@@ -26,9 +26,10 @@ class WorksController extends Controller
         ]);
     }
 
-    public function edit(Request  $request,$id){
+    public function edit(Request  $request, $id)
+    {
         $work_item = Works::find($id);
-        $work_category = WorksCategory::where(['status'=> 'publish','lang' => get_default_language()])->get();
+        $work_category = WorksCategory::where(['status' => 'publish', 'lang' => get_default_language()])->get();
         $all_language = Language::all();
         return view('backend.pages.works.work-edit')->with([
             'works_category' => $work_category,
@@ -54,9 +55,9 @@ class WorksController extends Controller
             'status' => 'required|string|max:191'
         ]);
         $blog_slug = !empty($request->slug) ? Str::slug($request->slug) : Str::slug($request->title);
-        $check_slug = Works::where('slug',$blog_slug)->get();
+        $check_slug = Works::where('slug', $blog_slug)->get();
 
-        if (count($check_slug) > 0){
+        if (count($check_slug) > 0) {
             $blog_slug .= count($check_slug) + 1;
         }
 
@@ -72,6 +73,8 @@ class WorksController extends Controller
             'clients' => $request->clients,
             'description' => $request->description,
             'whatweare' => $request->what_we_are,
+            'conference_topics' => $request->conference_topics,
+            'why_do_attend' => $request->why_do_attend,
             'key_dates' => $request->key_dates,
             'ocm' => $request->ocm,
             'venue' => $request->venue,
@@ -116,6 +119,8 @@ class WorksController extends Controller
                 'clients' => $request->clients,
                 'description' => $request->description,
                 'whatweare' => $request->what_we_are,
+                'conference_topics' => $request->conference_topics,
+                'why_do_attend' => $request->why_do_attend,
                 'key_dates' => $request->key_dates,
                 'ocm' => $request->ocm,
                 'venue' => $request->venue,
@@ -128,13 +133,14 @@ class WorksController extends Controller
         return redirect()->back()->with(['msg' => __('Works Item Updated...'), 'type' => 'success']);
     }
 
-    public function clone(Request $request){
+    public function clone(Request $request)
+    {
         $work_item = Works::find($request->item_id);
 
         $blog_slug = $work_item->slug;
 
-        $check_slug = Works::where('slug',$work_item->slug)->get();
-        if (count($check_slug) > 0){
+        $check_slug = Works::where('slug', $work_item->slug)->get();
+        if (count($check_slug) > 0) {
             $blog_slug .= count($check_slug) + 1;
         }
         Works::find($work_item->id)->update(
@@ -163,8 +169,9 @@ class WorksController extends Controller
         return redirect()->back()->with(['msg' => __('Delete Success...'), 'type' => 'danger']);
     }
 
-    public function new_work(){
-        $work_category = WorksCategory::where(['status'=> 'publish','lang' => get_default_language()])->get();
+    public function new_work()
+    {
+        $work_category = WorksCategory::where(['status' => 'publish', 'lang' => get_default_language()])->get();
         $all_language = Language::all();
         return view('backend.pages.works.work-new')->with([
             'works_category' => $work_category,
@@ -228,17 +235,19 @@ class WorksController extends Controller
         ]);
     }
 
-    public function category_by_slug(Request $request){
-        $all_category = WorksCategory::where('lang',$request->lang)->get();
+    public function category_by_slug(Request $request)
+    {
+        $all_category = WorksCategory::where('lang', $request->lang)->get();
         return response()->json($all_category);
     }
 
-    public function bulk_action(Request $request){
+    public function bulk_action(Request $request)
+    {
         $all = Works::find($request->ids);
-        foreach($all as $item){
-            if ($request->type == 'delete'){
+        foreach ($all as $item) {
+            if ($request->type == 'delete') {
                 $item->delete();
-            }else{
+            } else {
                 $item->status = $request->type;
                 $item->save();
             }
@@ -246,12 +255,13 @@ class WorksController extends Controller
         return response()->json(['status' => 'ok']);
     }
 
-    public function category_bulk_action(Request $request){
+    public function category_bulk_action(Request $request)
+    {
         $all = WorksCategory::find($request->ids);
-        foreach($all as $item){
-            if ($request->type == 'delete'){
+        foreach ($all as $item) {
+            if ($request->type == 'delete') {
                 $item->delete();
-            }else{
+            } else {
                 $item->status = $request->type;
                 $item->save();
             }
@@ -259,5 +269,3 @@ class WorksController extends Controller
         return response()->json(['status' => 'ok']);
     }
 }
-
-

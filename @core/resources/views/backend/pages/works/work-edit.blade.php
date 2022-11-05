@@ -63,6 +63,16 @@
                                 <div class="summernote">{!! $work_item->whatweare !!}</div>
                             </div>
                             <div class="form-group">
+                                <label for="why_do_attend">Why do attend?</label>
+                                <input type="hidden" name="why_do_attend" id="why_do_attend" value="{{$work_item->why_do_attend}}" >
+                                <div class="summernote">{!! $work_item->why_do_attend !!}</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="conference_topics">Conference Topics</label>
+                                <input type="hidden" name="conference_topics" id="conference_topics" value="{{$work_item->conference_topics}}" >
+                                <div class="summernote">{!! $work_item->conference_topics !!}</div>
+                            </div>
+                            <div class="form-group">
                                 <label for="key_dates">Key dates</label>
                                 <input type="hidden" name="key_dates" id="key_dates" value="{{$work_item->key_dates}}">
                                 <div class="summernote">{!! $work_item->key_dates !!}</div>

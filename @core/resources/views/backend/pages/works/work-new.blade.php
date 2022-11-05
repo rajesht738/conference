@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css')}}">
 @endsection
 @section('site-title')
-    {{__('New Works')}}
+    New Conference
 @endsection
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
@@ -29,7 +29,7 @@
             <div class="col-lg-12 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">{{__('New work')}}</h4>
+                        <h4 class="header-title">New Conference</h4>
                         <form action="{{route('admin.work.new')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
@@ -51,6 +51,16 @@
                             <div class="form-group">
                                 <label for="description">{{__('Description')}}</label>
                                 <input type="hidden" name="description" id="description" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="why_do_attend">Why do attend?</label>
+                                <input type="hidden" name="why_do_attend" id="why_do_attend" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="conference_topics">Conference Topics</label>
+                                <input type="hidden" name="conference_topics" id="conference_topics" >
                                 <div class="summernote"></div>
                             </div>
                             <div class="form-group">

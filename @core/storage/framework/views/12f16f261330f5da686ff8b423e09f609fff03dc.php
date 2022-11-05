@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="<?php echo e(asset('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css')); ?>">
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('site-title'); ?>
-    <?php echo e(__('Edit Works')); ?>
-
+    New Conference
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
@@ -29,12 +28,8 @@
             <div class="col-lg-12 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <div class="header-wrap">
-                        <h4 class="header-title"><?php echo e(__('Edit work')); ?></h4>
-                            <a href="<?php echo e(route('admin.work')); ?>" class="btn btn-primary btn-xs"><i class="fas fa-angle-double-left"></i> <?php echo e(__('All Works')); ?></a>
-                        </div>
-                        <form action="<?php echo e(route('admin.work.update')); ?>" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="id" value="<?php echo e($work_item->id); ?>">
+                        <h4 class="header-title">New Conference</h4>
+                        <form action="<?php echo e(route('admin.work.new')); ?>" method="post" enctype="multipart/form-data">
                             <?php echo csrf_field(); ?>
                             <div class="form-group">
                                 <label for="language"><?php echo e(__('Language')); ?></label>
@@ -46,90 +41,87 @@
                             </div>
                             <div class="form-group">
                                 <label for="title"><?php echo e(__('Title')); ?></label>
-                                <input type="text" class="form-control"  id="title"  name="title" value="<?php echo e($work_item->title); ?>">
+                                <input type="text" class="form-control"  id="title"  name="title" placeholder="<?php echo e(__('Title')); ?>">
                             </div>
                             <div class="form-group">
                                 <label for="slug"><?php echo e(__('Slug')); ?></label>
-                                <input type="text" class="form-control"  name="slug" value="<?php echo e($work_item->slug); ?>">
+                                <input type="text" class="form-control"  name="slug" placeholder="<?php echo e(__('Slug')); ?>">
                             </div>
                             <div class="form-group">
                                 <label for="description"><?php echo e(__('Description')); ?></label>
-                                <input type="hidden" name="description" id="description" value="<?php echo e($work_item->description); ?>">
-                                <div class="summernote"><?php echo $work_item->description; ?></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="what_we_are">What we are</label>
-                                <input type="hidden" name="what_we_are" id="what_we_are" value="<?php echo e($work_item->whatweare); ?>">
-                                <div class="summernote"><?php echo $work_item->whatweare; ?></div>
+                                <input type="hidden" name="description" id="description" >
+                                <div class="summernote"></div>
                             </div>
                             <div class="form-group">
                                 <label for="why_do_attend">Why do attend?</label>
-                                <input type="hidden" name="why_do_attend" id="why_do_attend" value="<?php echo e($work_item->why_do_attend); ?>" >
-                                <div class="summernote"><?php echo $work_item->why_do_attend; ?></div>
+                                <input type="hidden" name="why_do_attend" id="why_do_attend" >
+                                <div class="summernote"></div>
                             </div>
                             <div class="form-group">
                                 <label for="conference_topics">Conference Topics</label>
-                                <input type="hidden" name="conference_topics" id="conference_topics" value="<?php echo e($work_item->conference_topics); ?>" >
-                                <div class="summernote"><?php echo $work_item->conference_topics; ?></div>
+                                <input type="hidden" name="conference_topics" id="conference_topics" >
+                                <div class="summernote"></div>
                             </div>
                             <div class="form-group">
-                                <label for="key_dates">Key dates</label>
-                                <input type="hidden" name="key_dates" id="key_dates" value="<?php echo e($work_item->key_dates); ?>">
-                                <div class="summernote"><?php echo $work_item->key_dates; ?></div>
+                                <label for="what_we_are">What we are</label>
+                                <input type="hidden" name="what_we_are" id="what_we_are" >
+                                <div class="summernote"></div>
                             </div>
                             <div class="form-group">
-                                <label for="sponsherships">Sponsherships</label>
-                                <input type="hidden" name="sponsherships" id="sponsherships" value="<?php echo e($work_item->sponsherships); ?>">
-                                <div class="summernote"><?php echo $work_item->sponsherships; ?></div>
+                                <label for="key_dates">Key Dates</label>
+                                <input type="hidden" name="key_dates" id="key_dates" >
+                                <div class="summernote"></div>
                             </div>
                             <div class="form-group">
                                 <label for="ocm">OCM</label>
-                                <input type="hidden" name="ocm" id="ocm" value="<?php echo e($work_item->ocm); ?>">
-                                <div class="summernote"><?php echo $work_item->ocm; ?></div>
+                                <input type="hidden" name="ocm" id="ocm" >
+                                <div class="summernote"></div>
                             </div>
                             <div class="form-group">
                                 <label for="venue">Venue</label>
-                                <input type="hidden" name="venue" id="venue" value="<?php echo e($work_item->venue); ?>">
-                                <div class="summernote"><?php echo $work_item->venue; ?></div>
+                                <input type="hidden" name="venue" id="venue" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sponsherships">Sponshership</label>
+                                <input type="hidden" name="sponsherships" id="sponsherships" >
+                                <div class="summernote"></div>
                             </div>
                             <div class="form-group">
                                 <label for="location">Location</label>
-                                <input type="text" class="form-control"  id="clients"  name="clients" value="<?php echo e($work_item->clients); ?>">
+                                <input type="text" class="form-control"  id="location"  name="clients" placeholder="<?php echo e(__('Clients')); ?>">
                             </div>
                             <div class="form-group">
                                 <label for="start_date"><?php echo e(__('Start Date')); ?></label>
-                                <input type="date" class="form-control"  id="start_date"  name="start_date" value="<?php echo e($work_item->start_date); ?>">
+                                <input type="date" class="form-control"  id="start_date"  name="start_date" placeholder="<?php echo e(__('Start Date')); ?>">
                             </div>
                             <div class="form-group">
                                 <label for="end_date"><?php echo e(__('End Date')); ?></label>
-                                <input type="date" class="form-control"  id="end_date"  name="end_date" value="<?php echo e($work_item->end_date); ?>">
+                                <input type="date" class="form-control"  id="end_date"  name="end_date" placeholder="<?php echo e(__('End Date')); ?>">
                             </div>
+
                             <div class="form-group">
                                 <label for="categories_id"><?php echo e(__('Category')); ?></label>
                                 <select name="categories_id[]" multiple id="category" class="form-control nice-select wide">
                                     <option value=""><?php echo e(__('Select Category')); ?></option>
-
                                     <?php $__currentLoopData = $works_category; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <option <?php if(in_array($data->id,$work_item->categories_id)): ?> selected <?php endif; ?> value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
+                                        <option value="<?php echo e($data->id); ?>"><?php echo e($data->name); ?></option>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="meta_tags"><?php echo e(__('Meta Tags')); ?></label>
-                                <input type="text" name="meta_tags"  class="form-control" data-role="tagsinput" value="<?php echo e($work_item->meta_tags); ?>">
+                                <input type="text" name="meta_tags"  class="form-control" data-role="tagsinput">
                             </div>
                             <div class="form-group">
                                 <label for="meta_description"><?php echo e(__('Meta Description')); ?></label>
-                                <textarea name="meta_description"  class="form-control" rows="5" id="meta_description"><?php echo e($work_item->meta_description); ?></textarea>
+                                <textarea name="meta_description"  class="form-control" rows="5" id="meta_description"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="image"><?php echo e(__('Image')); ?></label>
                                 <div class="media-upload-btn-wrapper">
-                                    <div class="img-wrap">
-                                        <?php echo render_attachment_preview($work_item->image,'',true); ?>
-
-                                    </div>
-                                    <input type="hidden" name="image" value="<?php echo e($work_item->image); ?>">
+                                    <div class="img-wrap"></div>
+                                    <input type="hidden" name="image">
                                     <button type="button" class="btn btn-info media_upload_form_btn" data-btntitle="Select Work Image" data-modaltitle="Upload Work Image" data-toggle="modal" data-target="#media_upload_modal">
                                         <?php echo e(__('Upload Image')); ?>
 
@@ -140,11 +132,8 @@
                             <div class="form-group">
                                 <label for="image"><?php echo e(__('Gallery')); ?></label>
                                 <div class="media-upload-btn-wrapper gallery">
-                                    <div class="img-wrap">
-                                        <?php echo render_attachment_gallery_preview($work_item->gallery); ?>
-
-                                    </div>
-                                    <input type="hidden" name="gallery" value="<?php echo e($work_item->gallery); ?>">
+                                    <div class="img-wrap"></div>
+                                    <input type="hidden" name="gallery">
                                     <button type="button" class="btn btn-info media_upload_form_btn" data-mulitple="true" data-btntitle="Select Image" data-modaltitle="Upload Image" data-toggle="modal" data-target="#media_upload_modal">
                                         <?php echo e(__('Upload Image')); ?>
 
@@ -155,11 +144,11 @@
                             <div class="form-group">
                                 <label for="status"><?php echo e(__('Status')); ?></label>
                                 <select name="status" id="status" class="form-control">
-                                    <option <?php if($work_item->status == 'publish'): ?> selected <?php endif; ?> value="publish"><?php echo e(__('Publish')); ?></option>
-                                    <option <?php if($work_item->status == 'draft'): ?> selected <?php endif; ?> value="draft"><?php echo e(__('Draft')); ?></option>
+                                    <option value="publish"><?php echo e(__('Publish')); ?></option>
+                                    <option value="draft"><?php echo e(__('Draft')); ?></option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4"><?php echo e(__('Update work')); ?></button>
+                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4"><?php echo e(__('Add work')); ?></button>
                         </form>
                     </div>
                 </div>
@@ -221,4 +210,4 @@
     <?php echo $__env->make('backend.partials.media-upload.media-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('backend.admin-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\conference\@core\resources\views/backend/pages/works/work-edit.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('backend.admin-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\conference\@core\resources\views/backend/pages/works/work-new.blade.php ENDPATH**/ ?>

@@ -16,6 +16,8 @@ class Works extends Model
         'clients',
         'description',
         'whatweare',
+        'why_do_attend',
+        'conference_topics',
         'key_dates',
         'sponsherships',
         'ocm',

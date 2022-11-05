@@ -136,32 +136,37 @@
                 </div>
                 <div class="col-lg-6" style="padding-left: 45px;">
 
-                    <p style="font-size: 34px;
-                    font-weight: 600; color: blue;">Why do attend?</p>
+                    
                     <div class="post-description">
-                       <p> Vaccines Summit-2022 delivers unlimited opportunities for making business deals, product
-                        enhancements, cutting edge solutions for improving and elevating the company’s business and
-                        partnership. The conference provides a unique platform for all the leading industry professionals,
-                        institutional investors, capitalists, corporate investors and business development executives to
-                        have private One-to-One meetings with elite business representatives which increase the chances of
-                        marketing in this networking world.
-                       </p>
-                        <h2>Who can attend?</h2>
-                        <ul>
-                        <li>Government and non-government officials</li>
-                            <li> C-Level Executives</li>
-                                <li>Decision Makers</li>
-                                    <li>Vice Presidents</li>
-                                        <li> Drug developers</li>
-                                            <li> Academician</li>
-                                                <li>Researchers & Developers</li>
-                                                    <li>Directors</li>
-                                                        <li>Healthcare professionals</li>
-                        </ul>
-                       
+                        <?php echo $work_item->why_do_attend; ?>
+
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row" style="background: #054a33;">
+        <div class="container" style="padding: 27px;">
+            <?php echo $work_item->conference_topics; ?>
+
+            <hr style="border-top: 2px solid yellow;">
+        </div>
+
+    </div>
+    <div class="row" style="background: #054a33; background-image: url(../assets/frontend/img/bg/conf-bg.jpg);">
+        <div class="container" style="display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 68%;
+        padding-bottom: 22px;">
+          <div class="col-xl-7 col-lg-9 text-center">
+            <h3 class="mb-3 ls text-white fs-md-2 fs-lg-3">SUBMIT YOUR ABSTRACT</h3>
+            <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: <a href="mailto:contact@biocoreconferences.com
+                " style="color:#fff;">contact@biocoreconferences.com
+            </a></p>
+            <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="#" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now [Closed!]</a>
+          </div>
         </div>
     </div>
 <?php $__env->stopSection(); ?>
