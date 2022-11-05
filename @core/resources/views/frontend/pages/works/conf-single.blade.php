@@ -171,8 +171,9 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        width: 68%;
-        padding-bottom: 22px;">
+        padding-bottom: 22px;
+        padding-top: 22px;
+        ">
           <div class="col-xl-7 col-lg-9 text-center">
             <h3 class="mb-3 ls text-white fs-md-2 fs-lg-3">SUBMIT YOUR ABSTRACT</h3>
             <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: <a href="mailto:contact@biocoreconferences.com
