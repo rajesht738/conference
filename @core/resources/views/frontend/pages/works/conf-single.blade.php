@@ -59,17 +59,17 @@
 @endsection
 @section('content')
     <div class="work-details-content-area padding-120">
+        <section id="conf-sponsherships-wrapper">
         <div class="row">
-            <div class="col-lg-12"
-                style="border-top: 5px solid #ffffa6;
-            border-bottom: 5px solid #f5f5bb;padding-left: 20%;background: #054a33;">
+            <div class="col-lg-12 conf-sponsherships">
                 {!! $work_item->sponsherships !!}
             </div>
         </div>
-
-        <div class="row" style="background: #054a33;">
+        </section>
+        <section id="conf-team">
+        <div class="row">
             <div class="container">
-                <div class="row" style="padding-top: 75px;">
+                <div class="row">
                     @foreach ($all_team_members as $data)
                         <div class="col-lg-4 col-md-6">
                             <div class="row" style="padding: 12px;">
@@ -133,12 +133,13 @@
                 </div>
             </div>
         </div>
+        </section>
 
 
-
+    <section id="conf-why-we-attend">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6" style="padding-right: 45px;">
+                <div class="col-lg-6 conf-about">
                     <div class="portfolio-details-item">
                         <p style="font-size: 34px;
                        font-weight: 600; color: blue;">About us</p>
@@ -148,7 +149,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-6" style="padding-left: 45px;">
+                <div class="col-lg-6 conf-wytoattend">
 
                     {{-- <p style="font-size: 34px;
                     font-weight: 600; color: blue;">Why do attend?</p> --}}
@@ -159,32 +160,30 @@
             </div>
         </div>
     </div>
-    <div class="row" style="background: #054a33;">
-        <div class="container" style="padding: 27px;">
+    <section id="conf-topic">
+    <div class="row">
+        <div class="container">
             {!! $work_item->conference_topics !!}
             <hr style="border-top: 2px solid yellow;">
         </div>
 
     </div>
-    <div class="row" style="background: #054a33; background-image: url(../assets/frontend/img/bg/conf-bg.jpg);">
-        <div class="container" style="display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding-bottom: 22px;
-        padding-top: 22px;
-        ">
-          <div class="col-xl-7 col-lg-9 text-center">
-            <h3 class="mb-3 ls text-white fs-md-2 fs-lg-3">SUBMIT YOUR ABSTRACT</h3>
-            <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: <a href="mailto:contact@biocoreconferences.com
-                " style="color:#fff;">contact@biocoreconferences.com
-            </a></p>
-            <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="#" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now [Closed!]</a>
-          </div>
+    </section>
+    <section id="conf-submitAbstract">
+        <div class="row">
+            <div class="container sumitAbstractWrapper">
+              <div class="col-xl-7 col-lg-9 text-center">
+                <h3 class="mb-3 ls text-white fs-md-2 fs-lg-3">SUBMIT YOUR ABSTRACT</h3>
+                <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: <a href="mailto:contact@biocoreconferences.com
+                    " style="color:#fff;">contact@biocoreconferences.com
+                </a></p>
+                <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="#" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now [Closed!]</a>
+              </div>
+            </div>
         </div>
-    </div>
+    </section>
+   
     <section id="contact">
-
         <div class="container">
           <h3 class="mb-lg-6 mb-4">Location &amp; Contact</h3>
           <div class="row">
@@ -194,8 +193,8 @@
                 <input class="form-control" type="text" name="name" id="name" required="" placeholder="Your Name">
                 <input class="form-control my-4" type="email" name="email" id="email" required="" placeholder="Email Address">
                 <textarea class="form-control text-aria-height" name="message" id="message" rows="10" placeholder="Type your message"></textarea>
-                {{-- <div style="margin-top:20px" class="g-recaptcha" data-sitekey="6LcU3NMUAAAAAHdANaeZcLlTKPLI2eAuJwyWhoxN" callback="verifyCaptcha"><div><iframe src="https://www.recaptcha.net/recaptcha/api/fallback?k=6LcU3NMUAAAAAHdANaeZcLlTKPLI2eAuJwyWhoxN&amp;hl=en&amp;v=Ixi5IiChXmIG6rRkjUa1qXHT&amp;t=41506" frameborder="0" scrolling="no" style="width: 302px; height: 422px;"></iframe><div style="margin: -4px 0px 0px; padding: 0px; background: rgb(249, 249, 249); border: 1px solid rgb(193, 193, 193); border-radius: 3px; height: 60px; width: 300px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: block;"></textarea></div></div></div>
-                <div id="g-recaptcha-error"></div> --}}
+                <div style="margin-top:20px" class="g-recaptcha" data-sitekey="6LcU3NMUAAAAAHdANaeZcLlTKPLI2eAuJwyWhoxN" callback="verifyCaptcha"><div><iframe src="https://www.recaptcha.net/recaptcha/api/fallback?k=6LcU3NMUAAAAAHdANaeZcLlTKPLI2eAuJwyWhoxN&amp;hl=en&amp;v=Ixi5IiChXmIG6rRkjUa1qXHT&amp;t=41506" frameborder="0" scrolling="no" style="width: 302px; height: 422px;"></iframe><div style="margin: -4px 0px 0px; padding: 0px; background: rgb(249, 249, 249); border: 1px solid rgb(193, 193, 193); border-radius: 3px; height: 60px; width: 300px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: block;"></textarea></div></div></div>
+                <div id="g-recaptcha-error"></div>
                 <button class="btn btn-primary btn-block btn-lg mt-4" type="submit" name="submit" value="Send!">submit</button>
                 
               </form>
@@ -217,8 +216,8 @@
                    
                 </div>
                 <div class="col-md-7 border-left pr-md-4">
-                  	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12411.4412439609!2d-77.3545008!3d38.9500195!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x516dc3f2955b27a!2sSheraton%20Reston%20Hotel!5e0!3m2" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12411.441243960975!2d-77.3545008!3d38.9500195!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x516dc3f2955b27a!2sSheraton%20Reston%20Hotel!5e0!3m2!1sen!2sin!4v1578246072360!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
               </div>
               
             </div>
@@ -226,7 +225,7 @@
         </div>
       </section>
 
-    <section style=" background-color: #302758;">
+    <section id="footerTop">
 
         <div class="container">
         <div class="row" style="padding:25px;">

@@ -252,7 +252,46 @@ code {
     color: var(--main-color-one);
 }
 
+section#conf-sponsherships-wrapper {
+    border-top: 5px solid #ffffa6;
+    border-bottom: 5px solid #f5f5bb;
+    padding-left: 20%;
+    background: #054a33;
+}
 
+section#conf-team {
+    background: #054a33;
+    padding-top: 75px;
+}
+.col-lg-6.conf-about {
+    padding-right: 45px;
+}
+.col-lg-6.conf-wytoattend {
+    padding-left: 45px;
+}
+#conf-topic{
+    background: #054a33;
+    padding: 27px;
+}
+#conf-submitAbstract{
+    background: #054a33;
+    background-image: url(../img/bg/conf-bg.jpg);
+}
+.sumitAbstractWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 22px;
+    padding-top: 22px;
+}
+section#contact {
+    background: white;
+    padding: 32px;
+}
+section#footerTop {
+    background-color: #302758;
+}
 /*--------------------------------------------------------------
 # Globals
 --------------------------------------------------------------*/
