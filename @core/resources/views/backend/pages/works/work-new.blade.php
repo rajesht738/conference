@@ -122,7 +122,7 @@
                                 <label for="image">Banner Image</label>
                                 <div class="media-upload-btn-wrapper">
                                     <div class="img-wrap"></div>
-                                    <input type="hidden" name="conference_breadcrumb_bg">
+                                    <input type="hidden" name="banner_image">
                                     <button type="button" class="btn btn-info media_upload_form_btn" data-btntitle="Select Work Image" data-modaltitle="Upload Work Image" data-toggle="modal" data-target="#media_upload_modal">
                                         {{__('Upload Image')}}
                                     </button>

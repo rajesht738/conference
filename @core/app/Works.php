@@ -23,6 +23,7 @@ class Works extends Model
         'ocm',
         'venue',
         'image',
+        'banner_image',
         'gallery',
         'slug',
         'meta_tags',

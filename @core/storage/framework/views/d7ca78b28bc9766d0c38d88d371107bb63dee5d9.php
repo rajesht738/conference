@@ -4,9 +4,8 @@
  <?php echo $__env->make('frontend.partials.'.$inner_page_navbar, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <section class="breadcrumb-area breadcrumb-bg <?php echo e($inner_page_navbar); ?>"
 <?php
-    $site_breadcrumb_bg = get_attachment_image_by_id(get_static_option('conference_breadcrumb_bg'),"full",false);
+    $site_breadcrumb_bg = get_attachment_image_by_id($work_item->banner_image,"full",false);
 ?>
-
 <?php if(!empty($site_breadcrumb_bg)): ?>
 style="background-image: url(<?php echo e($site_breadcrumb_bg['img_url']); ?>);"
 <?php endif; ?>

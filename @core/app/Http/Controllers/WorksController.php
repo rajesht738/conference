@@ -81,10 +81,11 @@ class WorksController extends Controller
             'venue' => $request->venue,
             'sponsherships' => $request->sponsherships,
             'image' => $request->image,
+            'banner_image' => $request->banner_image,
             'status' => $request->status,
             'categories_id' => serialize($request->categories_id),
         ]);
-        update_static_option('conference_breadcrumb_bg', $request->conference_breadcrumb_bg);
+       // update_static_option('conference_breadcrumb_bg', $request->conference_breadcrumb_bg);
         return redirect()->back()->with(['msg' => __('New work Added...'), 'type' => 'success']);
     }
 
@@ -102,7 +103,7 @@ class WorksController extends Controller
             'image' => 'nullable|string|max:191',
             'meta_description' => 'nullable|string|max:191',
             'meta_tags' => 'nullable|string|max:191',
-            'conference_breadcrumb_bg' => 'nullable|string|max:191',
+            // 'conference_breadcrumb_bg' => 'nullable|string|max:191',
             'status' => 'required|string|max:191',
         ]);
 
@@ -128,6 +129,7 @@ class WorksController extends Controller
                 'venue' => $request->venue,
                 'sponsherships' => $request->sponsherships,
                 'image' => $request->image,
+                'banner_image' => $request->banner_image,
                 'status' => $request->status,
                 'categories_id' => serialize($request->categories_id),
             ]

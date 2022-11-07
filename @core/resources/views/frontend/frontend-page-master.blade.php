@@ -4,6 +4,8 @@
 <section class="breadcrumb-area breadcrumb-bg {{$inner_page_navbar}}"
 @php
     $site_breadcrumb_bg = get_attachment_image_by_id(get_static_option('site_breadcrumb_bg'),"full",false);
+
+    dd($site_breadcrumb_bg)
 @endphp
 @if (!empty($site_breadcrumb_bg))
 style="background-image: url({{$site_breadcrumb_bg['img_url']}});"

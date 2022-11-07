@@ -139,15 +139,13 @@
                             @php
                                 $site_breadcrumb_bg = get_attachment_image_by_id(get_static_option('conference_breadcrumb_bg'), 'full', false);
                             @endphp
-                            <div class="form-group">
+                             <div class="form-group">
                                 <label for="image">Banner Image</label>
                                 <div class="media-upload-btn-wrapper">
                                     <div class="img-wrap">
-                                        @if (!empty($site_breadcrumb_bg))
-                                        {!! render_attachment_preview($site_breadcrumb_bg['img_url'], '', true) !!}
-                                        @endif
+                                        {!! render_attachment_preview($work_item->banner_image, '', true) !!}
                                     </div>
-                                    <input type="hidden" name="conference_breadcrumb_bg" value="@if (!empty($site_breadcrumb_bg)){{ $site_breadcrumb_bg['img_url'] }}@endif">
+                                    <input type="hidden" name="banner_image" value="{{ $work_item->banner_image }}">
                                     <button type="button" class="btn btn-info media_upload_form_btn"
                                         data-btntitle="Select Work Image" data-modaltitle="Upload Work Image"
                                         data-toggle="modal" data-target="#media_upload_modal">
