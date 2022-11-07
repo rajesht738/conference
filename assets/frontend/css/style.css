@@ -94,6 +94,21 @@ html {
 img.grid {
     border: 1px solid;
     border-radius: 10px;
+    height: 170px !important;
+    width: 150px !important; 
+   
+}
+.confTeam{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.single-team-member-one .confThumb img {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 10px;
     height: 150px !important;
     width: 150px !important;
 }
@@ -259,11 +274,22 @@ section#conf-sponsherships-wrapper {
     border-bottom: 5px solid #f5f5bb;
     padding-left: 20%;
     background: #054a33;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat, repeat;
+    /* background-image: url(http://localhost/conference/assets/uploads/media-uploader/home-page-01-testimonial-background-image-65655441587042298.jpg); */
+    /* background-image: url(../../backend/images/popup/dizcox-popup--min.jpg); */
+    background-blend-mode: saturation;
 }
 
 section#conf-team {
     background: #054a33;
-    padding-top: 75px;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    /* background-repeat: no-repeat, repeat; */
+    background-image: url(../../../assets/uploads/media-uploader/home-page-01-testimonial-background-image-65655441587042298.jpg);
+    background-blend-mode: saturation;
 }
 .col-lg-6.conf-about {
     padding-right: 45px;
@@ -274,6 +300,11 @@ section#conf-team {
 #conf-topic{
     background: #054a33;
     padding: 27px;
+    width: 100%;
+    height: 100%;
+    /* background-repeat: no-repeat, repeat; */
+    background-image: url(../../../assets/uploads/media-uploader/home-page-01-testimonial-background-image-65655441587042298.jpg);
+    background-blend-mode: saturation;
 }
 #conf-submitAbstract{
     background: #054a33;
@@ -6532,7 +6563,7 @@ background: var(--main-color-one);
 }
 
 .contact-form .form-group .form-control {
-    /* background-color: #f4f7fc; */
+    background-color: #f4f7fc;
     height: 50px;
     border: none;
     padding: 0 20px;
@@ -9866,8 +9897,10 @@ button.anchor-btn {
 }
 
 #map iframe {
-    min-height: 250px;
+    min-height: 340px;
+    width: 450px;
 }
+
 /* language dropdown */
 
 .language_dropdown ul.show {

@@ -72,7 +72,12 @@
                         {!! render_image_markup_by_attachment_id($gall) !!}
                     </div>
                     <div class="container pos-rel">
-                       <div class="row align-items-center">
+                        <div class="row align-items-center" style="
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    ">
                           <div class="col-xl-6 col-lg-7 col-md-8">
                              <div class="banner-content banner-content1 banner-content1-1 pt-40">
                                 
@@ -107,8 +112,13 @@
         </div>
         </section>
         <section id="conf-team">
+       
         <div class="row">
             <div class="container">
+                <p style="color: #fff;
+                font-size: 28px;
+                padding-bottom: 20px;
+                font-weight: bold;">The Best of {!! $work_item->title !!}</p>   
                 <div class="row">
                     @foreach ($all_team_members as $data)
                         <div class="col-lg-4 col-md-6">
@@ -222,23 +232,39 @@
             </div>
         </div>
     </section>
-   
     <section id="contact">
         <div class="container">
-          <h3 class="mb-lg-6 mb-4">Location &amp; Contact</h3>
+          <h3 class="mb-lg-4 mb-4">Location &amp; Contact</h3>
           <div class="row">
+            @if(get_static_option('contact_page_form_section_status') == 'on')
             <div class="col-lg-4">
-                <div id="conmsg"></div>
-              <form name="contact_form" action="#" method="post" onsubmit="return submitContactForm();">
-                <input class="form-control" type="text" name="name" id="name" required="" placeholder="Your Name">
-                <input class="form-control my-4" type="email" name="email" id="email" required="" placeholder="Email Address">
-                <textarea class="form-control text-aria-height" name="message" id="message" rows="10" placeholder="Type your message"></textarea>
-                <div style="margin-top:20px" class="g-recaptcha" data-sitekey="6LcU3NMUAAAAAHdANaeZcLlTKPLI2eAuJwyWhoxN" callback="verifyCaptcha"><div><iframe src="https://www.recaptcha.net/recaptcha/api/fallback?k=6LcU3NMUAAAAAHdANaeZcLlTKPLI2eAuJwyWhoxN&amp;hl=en&amp;v=Ixi5IiChXmIG6rRkjUa1qXHT&amp;t=41506" frameborder="0" scrolling="no" style="width: 302px; height: 422px;"></iframe><div style="margin: -4px 0px 0px; padding: 0px; background: rgb(249, 249, 249); border: 1px solid rgb(193, 193, 193); border-radius: 3px; height: 60px; width: 300px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: block;"></textarea></div></div></div>
-                <div id="g-recaptcha-error"></div>
-                <button class="btn btn-primary btn-block btn-lg mt-4" type="submit" name="submit" value="Send!">submit</button>
-                
-              </form>
+                <div class="left-content-area">
+                    @include('backend.partials.message')
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach($errors->all() as $message)
+                                    <li>{{$message}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form action="{{route('frontend.contact.message')}}" method="post" enctype="multipart/form-data" id="contact_form_submit" class="contact-form">
+                        @csrf
+                        <input type="hidden" name="captcha_token" id="gcaptcha_token">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                {!! render_form_field_for_frontend(get_static_option('contact_page_form_fields')) !!}
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="submit-btn" type="submit">{{__('Send Message')}}</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
             </div>
+            @endif
             <div class="col-lg-8 mt-4 mt-lg-0 d-flex flex-column justify-content-between">
               <div class="row fs-1">
                 <div class="col-md-5 border-400 pr-md-4">
@@ -255,9 +281,11 @@
                
                    
                 </div>
-                <div class="col-md-7 border-left pr-md-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12411.441243960975!2d-77.3545008!3d38.9500195!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x516dc3f2955b27a!2sSheraton%20Reston%20Hotel!5e0!3m2!1sen!2sin!4v1578246072360!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-              </div>
+                @if(get_static_option('contact_page_google_map_section_status') == 'on')
+                <div id="map"  class="col-md-5 contact_page_map">
+                    {!! render_embed_google_map(get_static_option('contact_page_map_section_address'),20) !!}
+                </div>
+                @endif
               </div>
               
             </div>
@@ -265,7 +293,7 @@
         </div>
       </section>
 
-    <section id="footerTop">
+  <section id="footerTop">  
 
         <div class="container">
         <div class="row" style="padding:25px;">
@@ -308,5 +336,6 @@
             </div>
           
         </div>
-      </div></section>
+      </div>
+    </section>
 @endsection
