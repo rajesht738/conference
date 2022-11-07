@@ -91,9 +91,11 @@ html {
     -webkit-font-smoothing: antialiased;
     /* WebKit  */
 }
-.grid {
+img.grid {
     border: 1px solid;
     border-radius: 10px;
+    height: 150px !important;
+    width: 150px !important;
 }
 @keyframes slideInFromLeft {
     0% {
@@ -5162,6 +5164,8 @@ background: var(--main-color-one);
 .single-team-member-one .thumb {
     position: relative;
     overflow: hidden;
+    width: 155px;
+    height: 155px;
 }
 
 .single-team-member-one .thumb img {
@@ -5171,7 +5175,7 @@ background: var(--main-color-one);
 .single-team-member-one .thumb .hover {
     position: absolute;
     right: 0px;
-    top: 20px;
+    top: 0px;
 }
 
 .single-team-member-one .thumb .hover .social-icon li {

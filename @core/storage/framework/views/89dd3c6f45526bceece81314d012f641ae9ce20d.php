@@ -27,38 +27,48 @@
             <?php echo e(__('Edit Works')); ?></a></li>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('slider'); ?>
-    <div class="row">
-        <div class="col-lg-12 col-md-12">
-            <?php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; ?>
+    
+     <!-- banner area start  -->
+     <div class="banner-area banner-area1 pos-rel">
+        <div class="swiper-container slider__active">
+           <div class="swiper-wrapper">
+            <?php 
+            $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : [];
+             ?>
             <?php if(!empty($gallery_item)): ?>
-                <div class="case-study-gallery-wrapper margin-bottom-30 margin-top-40">
-                    <div class="case-study-gallery-carousel owl-carousel">
+            <?php $__currentLoopData = $gallery_item; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gall): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            
+              <div class="swiper-slide" data-background="<?php echo render_image_markup_by_attachment_id($gall); ?>">
+                 <div class="single-banner single-banner-1 banner-overlay-1 banner-835 d-flex align-items-center pos-rel">
+                    <div class="banner-bg banner-bg1 banner-bg1-1" data-background="">
+                        <?php echo render_image_markup_by_attachment_id($gall); ?>
 
-                        <?php $__currentLoopData = $gallery_item; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gall): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <div class="single-gallery-item">
-                                <div id="slideButton"
-                                    style="position: absolute;
-                                z-index: 1;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                width: 100%;
-                                height: 100%;
-                                gap: 5px;
-                                ">
-                                    <button class="btn btn-boxed btn-primary">Final Programm 2022</button>
-                                    <button class="btn btn-boxed btn-primary">Submit Abstract</button>
-                                </div>
-                                <?php echo render_image_markup_by_attachment_id($gall); ?>
-
-                            </div>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
-                </div>
-            <?php endif; ?>
-
+                    <div class="container pos-rel">
+                       <div class="row align-items-center">
+                          <div class="col-xl-6 col-lg-7 col-md-8">
+                             <div class="banner-content banner-content1 banner-content1-1 pt-40">
+                                
+                                <h1 class="banner-title white-color" data-animation="fadeInUp" data-delay=".8s"><?php echo e($work_item->title); ?></h1>
+                                <p class="banner-text" data-animation="fadeInUp" data-delay="1.0s"><?php echo e($work_item->clients); ?> <br>
+                                    <?php echo e($work_item->start_date); ?>  to <?php echo e($work_item->end_date); ?> </p>
+                                <div class="banner-btn one" data-animation="fadeInUp" data-delay="1.2s">
+                                   <a class="theme-btn red" href="#">Make An Order <i class="fal fa-arrow-alt-right"></i></a>
+                                   <a class="theme-btn yellow" href="#">How It Works <i class="fal fa-arrow-alt-right"></i></a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+              <?php endif; ?>
+             
+           </div>
         </div>
-    </div>
+     </div>
+     <!-- banner area end  -->
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
     <div class="work-details-content-area padding-120">
@@ -212,7 +222,7 @@
         </div>
       </section>
 
-    <section id="footer" style=" background-color: #302758;">
+    <section id="footerTop">
 
         <div class="container">
         <div class="row" style="padding:25px;">

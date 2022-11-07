@@ -74,14 +74,14 @@
                                                 style="
                                         padding: 0px !important;
                                         margin: 0;
-                                        font-size: 12px;
+                                        font-size: 14px;
                                     ">
                                                 98z St. Paul St, N1 7DZ, </p>
                                             <p class=""
                                                 style="
                                         padding: 0px !important;
                                         margin: 0;
-                                        font-size: 12px;
+                                        font-size: 14px;
                                     ">
                                                 Hackney, London, United Kingdom.</p>
 

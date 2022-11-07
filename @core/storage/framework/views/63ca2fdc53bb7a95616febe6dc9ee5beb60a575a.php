@@ -1,17 +1,6 @@
 
 <footer class="footer-area home-page-<?php echo e(get_static_option('home_page_variant')); ?> <?php if(request()->routeIs('homepage')): ?> is-homepage <?php else: ?> inner-page <?php endif; ?>">
-    <?php if(count($footer_widgets) > 0): ?>
-    <div class="footer-top padding-top-100 padding-bottom-65">
-        <div class="container">
-            <div class="row">
-                <?php $__currentLoopData = $footer_widgets; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <?php echo call_user_func_array($data->frontend_render_function,['id' => $data->id]); ?>
-
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </div>
-        </div>
-    </div>
-    <?php endif; ?>
+    
     <div class="copyright-area">
         <div class="container">
             <div class="row">
@@ -89,6 +78,11 @@
 <script src="<?php echo e(asset('assets/frontend/js/jquery.ihavecookies.min.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/frontend/js/main.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/common/js/countdown.jquery.js')); ?>"></script>
+
+<script src="<?php echo e(asset('assets/frontend/js/slider/meanmenu.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/js/slider/swiper-bundle.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/js/slider/nice-select.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/frontend/js/slider/main.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/frontend/js/toastr.min.js')); ?>"></script>
 <?php if(get_static_option('home_page_variant') == '09'): ?>
 <script src="<?php echo e(asset('assets/frontend/js/jQuery.rProgressbar.min.js')); ?>"></script>

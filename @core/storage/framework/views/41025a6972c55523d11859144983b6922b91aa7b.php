@@ -17,7 +17,7 @@
 
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('breadcrumb'); ?>
-    <li>What we are?</li>
+    <li>Key Dates</li>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('meta-tags'); ?>
     <meta name="description" content="<?php echo e($work_item->meta_tags); ?>">
@@ -31,10 +31,10 @@
                 <div class="col-lg-8">
                     <div class="portfolio-details-item">
                         <div class="thumb">
-                    
+                            
                         </div>
                         <div class="post-description">
-                            <?php echo $work_item->whatweare; ?>
+                            <?php echo $work_item->key_dates; ?>
 
                         </div>
                         <?php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; ?>
@@ -119,4 +119,4 @@
 <?php $__env->stopSection(); ?>
 
 
-<?php echo $__env->make('frontend.frontend-conf-Innerpage-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\conference\@core\resources\views/frontend/pages/works/conf-what-we-are.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('frontend.frontend-conf-Innerpage-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\conference\@core\resources\views/frontend/pages/works/conf-key-date.blade.php ENDPATH**/ ?>

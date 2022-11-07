@@ -1,4 +1,4 @@
-@extends('frontend.frontend-confpage-master')
+@extends('frontend.frontend-conf-Innerpage-master')
 @php $img_url = '';@endphp
 
 @section('og-meta')

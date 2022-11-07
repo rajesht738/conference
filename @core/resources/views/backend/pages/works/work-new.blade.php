@@ -119,7 +119,18 @@
                                 <textarea name="meta_description"  class="form-control" rows="5" id="meta_description"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="image">{{__('Image')}}</label>
+                                <label for="image">Banner Image</label>
+                                <div class="media-upload-btn-wrapper">
+                                    <div class="img-wrap"></div>
+                                    <input type="hidden" name="conference_breadcrumb_bg">
+                                    <button type="button" class="btn btn-info media_upload_form_btn" data-btntitle="Select Work Image" data-modaltitle="Upload Work Image" data-toggle="modal" data-target="#media_upload_modal">
+                                        {{__('Upload Image')}}
+                                    </button>
+                                </div>
+                                <small>{{__('Recommended image size 1920x1280')}}</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Thumb Image</label>
                                 <div class="media-upload-btn-wrapper">
                                     <div class="img-wrap"></div>
                                     <input type="hidden" name="image">

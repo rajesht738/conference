@@ -57,4 +57,4 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('frontend.frontend-confpage-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\conference\@core\resources\views/frontend/pages/works/conf-speakers.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('frontend.frontend-conf-Innerpage-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\conference\@core\resources\views/frontend/pages/works/conf-speakers.blade.php ENDPATH**/ ?>

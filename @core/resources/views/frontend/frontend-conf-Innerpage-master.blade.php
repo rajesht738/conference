@@ -4,12 +4,14 @@
  @include('frontend.partials.'.$inner_page_navbar)
 <section class="breadcrumb-area breadcrumb-bg {{$inner_page_navbar}}"
 @php
-    $site_breadcrumb_bg = get_attachment_image_by_id(get_static_option('site_breadcrumb_bg'),"full",false);
+    $site_breadcrumb_bg = get_attachment_image_by_id(get_static_option('conference_breadcrumb_bg'),"full",false);
 @endphp
+
 @if (!empty($site_breadcrumb_bg))
 style="background-image: url({{$site_breadcrumb_bg['img_url']}});"
 @endif
 >
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

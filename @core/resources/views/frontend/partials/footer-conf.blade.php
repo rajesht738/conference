@@ -1,6 +1,6 @@
 
 <footer class="footer-area home-page-{{get_static_option('home_page_variant')}} @if(request()->routeIs('homepage')) is-homepage @else inner-page @endif">
-    @if(count($footer_widgets) > 0)
+    {{-- @if(count($footer_widgets) > 0)
     <div class="footer-top padding-top-100 padding-bottom-65">
         <div class="container">
             <div class="row">
@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    @endif
+    @endif --}}
     <div class="copyright-area">
         <div class="container">
             <div class="row">
@@ -87,6 +87,11 @@
 <script src="{{asset('assets/frontend/js/jquery.ihavecookies.min.js')}}"></script>
 <script src="{{asset('assets/frontend/js/main.js')}}"></script>
 <script src="{{asset('assets/common/js/countdown.jquery.js')}}"></script>
+
+<script src="{{asset('assets/frontend/js/slider/meanmenu.js')}}"></script>
+<script src="{{asset('assets/frontend/js/slider/swiper-bundle.min.js')}}"></script>
+<script src="{{asset('assets/frontend/js/slider/nice-select.min.js')}}"></script>
+<script src="{{asset('assets/frontend/js/slider/main.js')}}"></script>
 <script src="{{asset('assets/frontend/js/toastr.min.js')}}"></script>
 @if(get_static_option('home_page_variant') == '09')
 <script src="{{asset('assets/frontend/js/jQuery.rProgressbar.min.js')}}"></script>

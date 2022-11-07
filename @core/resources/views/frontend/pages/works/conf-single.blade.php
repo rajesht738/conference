@@ -25,7 +25,7 @@
             {{ __('Edit Works') }}</a></li>
 @endsection
 @section('slider')
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-lg-12 col-md-12">
             @php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; @endphp
             @if (!empty($gallery_item))
@@ -55,7 +55,47 @@
             @endif
 
         </div>
-    </div>
+    </div> --}}
+     <!-- banner area start  -->
+     <div class="banner-area banner-area1 pos-rel">
+        <div class="swiper-container slider__active">
+           <div class="swiper-wrapper">
+            @php 
+            $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : [];
+             @endphp
+            @if (!empty($gallery_item))
+            @foreach ($gallery_item as $gall)
+            {{-- dd($gall); --}}
+              <div class="swiper-slide" data-background="{!! render_image_markup_by_attachment_id($gall) !!}">
+                 <div class="single-banner single-banner-1 banner-overlay-1 banner-835 d-flex align-items-center pos-rel">
+                    <div class="banner-bg banner-bg1 banner-bg1-1" data-background="">
+                        {!! render_image_markup_by_attachment_id($gall) !!}
+                    </div>
+                    <div class="container pos-rel">
+                       <div class="row align-items-center">
+                          <div class="col-xl-6 col-lg-7 col-md-8">
+                             <div class="banner-content banner-content1 banner-content1-1 pt-40">
+                                
+                                <h1 class="banner-title white-color" data-animation="fadeInUp" data-delay=".8s">{{ $work_item->title }}</h1>
+                                <p class="banner-text" data-animation="fadeInUp" data-delay="1.0s">{{ $work_item->clients }} <br>
+                                    {{ $work_item->start_date }}  to {{ $work_item->end_date }} </p>
+                                <div class="banner-btn one" data-animation="fadeInUp" data-delay="1.2s">
+                                   <a class="theme-btn red" href="#">Final Programm<i class="fal fa-arrow-alt-right"></i></a>
+                                   <a class="theme-btn yellow" href="#">Submit Presentation <i class="fal fa-arrow-alt-right"></i></a>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              @endforeach
+              @endif
+             
+           </div>
+        </div>
+     </div>
+     <!-- banner area end  -->
 @endsection
 @section('content')
     <div class="work-details-content-area padding-120">

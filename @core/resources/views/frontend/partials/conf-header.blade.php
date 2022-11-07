@@ -23,6 +23,9 @@
     {!! load_google_fonts() !!}
     <!-- all stylesheets -->
     <link rel="stylesheet" href="{{asset('assets/frontend/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/slider/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/slider/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/slider/swiper-bundle.css')}}">
     <link rel="stylesheet" href="{{asset('assets/frontend/css/fontawesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/frontend/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/frontend/css/animate.css')}}">
