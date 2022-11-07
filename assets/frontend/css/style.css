@@ -2171,6 +2171,7 @@ section.blog-content-area.padding-120 {
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     color: var(--paragraph-color);
+    font-weight: 100;
 }
 
 .social-icon li a:hover {
