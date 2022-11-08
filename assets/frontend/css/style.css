@@ -1639,12 +1639,7 @@ section.blog-content-area.padding-120 {
     border-top: 1px solid blue;
     margin-top: -8px;
 }
-select#title {
-    display: block !important;
-}
-.nice-select.form-control {
-    display: none !important;
-}
+
 .navbar-area .nav-container .navbar-collapse .navbar-nav li + li {
     margin-left: 20px;
 }
