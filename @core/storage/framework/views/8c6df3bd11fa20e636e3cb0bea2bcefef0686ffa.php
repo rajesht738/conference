@@ -56,11 +56,18 @@
                                 <input type="text" class="form-control" name="slug" value="<?php echo e($work_item->slug); ?>">
                             </div>
                             <div class="form-group">
+                                <label for="notice">Notice Board</label>
+                                <input type="hidden" name="notice" id="notice"
+                                    value="<?php echo e($work_item->notice); ?>">
+                                <div class="summernote"><?php echo $work_item->notice; ?></div>
+                            </div>
+                            <div class="form-group">
                                 <label for="description"><?php echo e(__('Description')); ?></label>
                                 <input type="hidden" name="description" id="description"
                                     value="<?php echo e($work_item->description); ?>">
                                 <div class="summernote"><?php echo $work_item->description; ?></div>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="what_we_are">What we are</label>
                                 <input type="hidden" name="what_we_are" id="what_we_are"
@@ -70,13 +77,13 @@
                             <div class="form-group">
                                 <label for="why_do_attend">Why do attend?</label>
                                 <input type="hidden" name="why_do_attend" id="why_do_attend"
-                                    value="<?php echo e($work_item->why_do_attend); ?>">
+                                    value="<?php echo e($work_item->why_do_attend); ?>" required>
                                 <div class="summernote"><?php echo $work_item->why_do_attend; ?></div>
                             </div>
                             <div class="form-group">
                                 <label for="conference_topics">Conference Topics</label>
                                 <input type="hidden" name="conference_topics" id="conference_topics"
-                                    value="<?php echo e($work_item->conference_topics); ?>">
+                                    value="<?php echo e($work_item->conference_topics); ?>" required>
                                 <div class="summernote"><?php echo $work_item->conference_topics; ?></div>
                             </div>
                             <div class="form-group">

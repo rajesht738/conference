@@ -76,7 +76,21 @@
      <!-- banner area end  -->
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
-    <div class="work-details-content-area padding-120">
+<section id="conf-new padding-120" style="background: white;
+color: lightseagreen;">
+<div class="row">
+    <div class="container">
+    <div class="alert alert-light alert-dismissible fade show sticky-kit shadow-sm rounded-0 mb-0" role="alert" style="">
+        <div class="row justify-content-center">
+            <?php echo $work_item->notice; ?>
+
+        </div>
+    <button class="close mt-md-2" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    </div>
+</div>
+</section>
+    <div class="work-details-content-area ">
         <section id="conf-sponsherships-wrapper">
         <div class="row">
             <div class="col-lg-12 conf-sponsherships">

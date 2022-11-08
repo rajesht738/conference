@@ -49,10 +49,16 @@
                                 <input type="text" class="form-control"  name="slug" placeholder="{{__('Slug')}}">
                             </div>
                             <div class="form-group">
+                                <label for="notice">Notice Board</label>
+                                <input type="hidden" name="notice" id="notice" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
                                 <label for="description">{{__('Description')}}</label>
                                 <input type="hidden" name="description" id="description" >
                                 <div class="summernote"></div>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="why_do_attend">Why do attend?</label>
                                 <input type="hidden" name="why_do_attend" id="why_do_attend" >

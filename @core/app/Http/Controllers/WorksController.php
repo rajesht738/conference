@@ -50,6 +50,8 @@ class WorksController extends Controller
             'description' => 'required|string',
             'categories_id' => 'required',
             'image' => 'nullable|string|max:191',
+            'banner_image' => 'nullable|string|max:191',
+            'notice' => 'nullable|string|max:191',
             'meta_description' => 'nullable|string|max:191',
             'meta_tags' => 'nullable|string|max:191',
             'conference_breadcrumb_bg' => 'nullable|string|max:191',
@@ -82,10 +84,11 @@ class WorksController extends Controller
             'sponsherships' => $request->sponsherships,
             'image' => $request->image,
             'banner_image' => $request->banner_image,
+            'notice' => $request->notice,
             'status' => $request->status,
             'categories_id' => serialize($request->categories_id),
         ]);
-       // update_static_option('conference_breadcrumb_bg', $request->conference_breadcrumb_bg);
+        // update_static_option('conference_breadcrumb_bg', $request->conference_breadcrumb_bg);
         return redirect()->back()->with(['msg' => __('New work Added...'), 'type' => 'success']);
     }
 
@@ -101,6 +104,8 @@ class WorksController extends Controller
             'description' => 'required|string',
             'categories_id' => 'required',
             'image' => 'nullable|string|max:191',
+            'banner_image' => 'nullable|string|max:191',
+            'notice' => 'nullable|string|max:191',
             'meta_description' => 'nullable|string|max:191',
             'meta_tags' => 'nullable|string|max:191',
             // 'conference_breadcrumb_bg' => 'nullable|string|max:191',
@@ -108,7 +113,7 @@ class WorksController extends Controller
         ]);
 
         $blog_slug = !empty($request->slug) ? Str::slug($request->slug) : Str::slug($request->title);
-
+       // dd($request);
         Works::find($request->id)->update(
             [
                 'title' => $request->title,
@@ -130,11 +135,12 @@ class WorksController extends Controller
                 'sponsherships' => $request->sponsherships,
                 'image' => $request->image,
                 'banner_image' => $request->banner_image,
+                'notice' => $request->notice,
                 'status' => $request->status,
                 'categories_id' => serialize($request->categories_id),
             ]
         );
-        update_static_option('conference_breadcrumb_bg', $request->conference_breadcrumb_bg);
+        //  update_static_option('conference_breadcrumb_bg', $request->conference_breadcrumb_bg);
         return redirect()->back()->with(['msg' => __('Works Item Updated...'), 'type' => 'success']);
     }
 

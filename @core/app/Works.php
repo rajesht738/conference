@@ -24,6 +24,7 @@ class Works extends Model
         'venue',
         'image',
         'banner_image',
+        'notice',
         'gallery',
         'slug',
         'meta_tags',
