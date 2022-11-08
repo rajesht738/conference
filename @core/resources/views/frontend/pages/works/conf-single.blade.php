@@ -240,7 +240,7 @@ color: lightseagreen;">
                 <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: <a href="mailto:contact@biocoreconferences.com
                     " style="color:#fff;">contact@biocoreconferences.com
                 </a></p>
-                <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="#" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now [Closed!]</a>
+                <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="/conferences/abstract-submission" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now</a>
               </div>
             </div>
         </div>
