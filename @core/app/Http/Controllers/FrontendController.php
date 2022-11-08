@@ -830,6 +830,12 @@ class FrontendController extends Controller
     
             return view('frontend.pages.works.conf-speakers')->with(['work_item' => $work_item,'all_team_members' => $all_team_members]);
         }
+        if($content=="gallery"){
+          //  $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
+            $all_team_members = TeamMember::where('conf', $slug)->orderBy('id', 'desc')->paginate(get_static_option('team_page_team_member_section_item'));
+    
+            return view('frontend.pages.works.conf-gallery')->with(['work_item' => $work_item,'all_team_members' => $all_team_members]);
+        }
     //  dd($work_item);
         return view('frontend.pages.works.conf-single')->with(['work_item' => $work_item, 'related_works' => $all_works]);
     }

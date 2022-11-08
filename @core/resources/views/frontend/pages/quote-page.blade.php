@@ -33,7 +33,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="quote-content-area padding-top-70">
-                        <h3 class="quote-title">{{get_static_option('quote_page_'.get_user_lang().'_form_title')}}</h3>
+                        <h3 class="quote-title">
+                           Submit Abstract
+                        </h3>
                         @include('backend.partials.message')
                         @if($errors->any())
                             <div class="alert alert-danger">
@@ -75,7 +77,7 @@
 
                                 <div class="col-lg-12">
                                     <div class="btn-wrapper text-center">
-                                        <button class="submit-btn" type="submit">{{__('Send Quote')}}</button>
+                                        <button class="submit-btn" type="submit">Submit</button>
                                     </div>
                                 </div>
                             </div>
