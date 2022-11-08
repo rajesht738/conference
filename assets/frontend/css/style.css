@@ -1643,7 +1643,7 @@ select#title {
     display: block !important;
 }
 .nice-select.form-control {
-    display: none;
+    display: none !important;
 }
 .navbar-area .nav-container .navbar-collapse .navbar-nav li + li {
     margin-left: 20px;
