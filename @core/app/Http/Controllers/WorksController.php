@@ -84,7 +84,7 @@ class WorksController extends Controller
             'sponsherships' => $request->sponsherships,
             'image' => $request->image,
             'banner_image' => $request->banner_image,
-            'notice' => $request->notice,
+            
             'status' => $request->status,
             'categories_id' => serialize($request->categories_id),
         ]);
@@ -104,8 +104,6 @@ class WorksController extends Controller
             'description' => 'required|string',
             'categories_id' => 'required',
             'image' => 'nullable|string|max:191',
-            'banner_image' => 'nullable|string|max:191',
-            'notice' => 'nullable|string|max:191',
             'meta_description' => 'nullable|string|max:191',
             'meta_tags' => 'nullable|string|max:191',
             // 'conference_breadcrumb_bg' => 'nullable|string|max:191',
