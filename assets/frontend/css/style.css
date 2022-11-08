@@ -299,8 +299,8 @@ section#conf-team {
 .col-lg-6.conf-wytoattend {
     padding-left: 45px;
 }
-section#conf-why-we-attend p {
-    color: #9d9292 !important;
+section#conf-why-we-attend p, span {
+    color: gray !important;
 }
 #conf-topic{
     background-color: rgb(0 0 0 / 82%);
