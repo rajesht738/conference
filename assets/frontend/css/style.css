@@ -374,7 +374,9 @@ section#footerTop {
     /* opacity: .7; */
     color: white !important;
 }
-
+section#footerTop p {
+    color: white;
+}
 /*--------------------------------------------------------------
 # Globals
 --------------------------------------------------------------*/
