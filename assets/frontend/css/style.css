@@ -229,6 +229,9 @@ ol li:before {
     body {
         margin: 0;
     }
+    .col-lg-4.col-md-6{
+        text-align: center;
+    }
 }
 
 /*input and button type focus outline disable*/
