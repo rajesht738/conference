@@ -234,8 +234,8 @@ color: lightseagreen;">
             <div class="container sumitAbstractWrapper">
               <div class="col-xl-7 col-lg-9 text-center">
                 <h3 class="mb-3 ls text-white fs-md-2 fs-lg-3">Submit Your Abstract</h3>
-                <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: <a href="mailto:contact@biocoreconferences.com
-                    " style="color:#fff; font-style="lowercase">contact@biocoreconferences.com
+                <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: 
+                <a href="mailto:contact@biocoreconferences.com" style="color:#fff; font-style="lowercase">contact@biocoreconferences.com
                 </a></p>
                 <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="/conferences/abstract-submission" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now</a>
               </div>
