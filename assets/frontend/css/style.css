@@ -333,7 +333,7 @@ section#conf-why-we-attend p, span {
     /* background-repeat: no-repeat, repeat; */
     background-image: url(../../../assets/uploads/media-uploader/home-page-01-testimonial-background-image-65655441587042298.jpg);
     background-blend-mode: overlay;
-    opacity: .7;
+    /* opacity: .7; */
 }
 .conf-sponsherships h3 {
     color: white;
@@ -371,7 +371,7 @@ section#footerTop {
     /* background-repeat: no-repeat, repeat; */
     background-image: url(../../../assets/uploads/media-uploader/home-page-01-testimonial-background-image-65655441587042298.jpg);
     background-blend-mode: overlay;
-    opacity: .7;
+    /* opacity: .7; */
     color: white !important;
 }
 
