@@ -128,10 +128,8 @@ color: lightseagreen;">
        
         <div class="row">
             <div class="container">
-                <p style="color: #fff;
-                font-size: 28px;
-                padding-bottom: 20px;
-                font-weight: bold;">The Best of {!! $work_item->title !!}</p>   
+                <h3 style="color: #fff;
+                padding-bottom: 20px;">The Best of {!! $work_item->title !!}</h3>   
                 <div class="row">
                     @foreach ($all_team_members as $data)
                         <div class="col-lg-4 col-md-6">
@@ -204,8 +202,7 @@ color: lightseagreen;">
             <div class="row">
                 <div class="col-lg-6 conf-about">
                     <div class="portfolio-details-item">
-                        <p style="font-size: 34px;
-                       font-weight: 600; color: blue;">About us</p>
+                        <h3 style="">About Us</h3>
                         <div class="post-description">
                             {!! $work_item->description !!}
                         </div>
@@ -236,9 +233,9 @@ color: lightseagreen;">
         <div class="row">
             <div class="container sumitAbstractWrapper">
               <div class="col-xl-7 col-lg-9 text-center">
-                <h3 class="mb-3 ls text-white fs-md-2 fs-lg-3">SUBMIT YOUR ABSTRACT</h3>
+                <h3 class="mb-3 ls text-white fs-md-2 fs-lg-3">Submit Your Abstract</h3>
                 <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: <a href="mailto:contact@biocoreconferences.com
-                    " style="color:#fff;">contact@biocoreconferences.com
+                    " style="color:#fff; font-style="lowercase">contact@biocoreconferences.com
                 </a></p>
                 <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="/conferences/abstract-submission" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now</a>
               </div>

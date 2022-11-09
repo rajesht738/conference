@@ -135,7 +135,7 @@
 
                                 <div class="col-lg-12">
                                     <div class="btn-wrapper text-center">
-                                        <button class="submit-btn" type="submit">Submit</button>
+                                        <button class="btn btn-primary submit-btn" type="submit">Submit</button>
                                     </div>
                                 </div>
                             </div>

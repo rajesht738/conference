@@ -295,6 +295,7 @@ section#conf-team {
 }
 .col-lg-6.conf-about {
     padding-right: 45px;
+    padding-top: 50px;
 }
 .col-lg-6.conf-wytoattend {
     padding-left: 45px;
@@ -6582,7 +6583,7 @@ background: var(--main-color-one);
 }
 
 .contact-form .form-group .form-control {
-    background-color: #f4f7fc;
+    background-color: #dfe4ed;
     height: 50px;
     border: none;
     padding: 0 20px;
