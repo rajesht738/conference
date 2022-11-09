@@ -18,6 +18,10 @@
     .banner-btn.one {
         display: flex;
     }
+    .banner-btn .theme-btn {
+        margin-right: 5px;
+        padding: 0 25px;
+    }
     .banner-title{
         font-size: 13px;
         letter-spacing: normal;
