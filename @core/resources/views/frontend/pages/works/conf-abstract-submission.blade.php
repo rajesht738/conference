@@ -82,7 +82,7 @@
             </div>
         </div>
     </div>
-    <section class="order-service-page-content-area padding-100">
+    <section class="order-service-page-content-area">
         <div class="container">
             {{-- <div class="row">
                 @foreach($all_contact_info as $data)
