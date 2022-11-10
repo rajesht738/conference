@@ -1710,7 +1710,9 @@ select#title {
 select#country {
     display: block !important;
 }
-
+section#footerTop li > a {
+    text-transform: inherit;
+}
 .navbar-area .nav-container .navbar-collapse .navbar-nav li+li {
     margin-left: 20px;
 }
