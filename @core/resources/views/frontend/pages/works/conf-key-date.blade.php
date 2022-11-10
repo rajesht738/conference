@@ -27,7 +27,7 @@
     <div class="work-details-content-area padding-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="portfolio-details-item">
                         <div class="thumb">
                             {{-- {!! render_image_markup_by_attachment_id($work_item->image,'','large') !!} --}}
@@ -50,7 +50,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
                     <div class="project-widget">
                         <div class="project-info-item">
                             <h4 class="title">{{get_static_option('work_single_page_'.$user_select_lang_slug.'_sidebar_title')}}</h4>
@@ -78,8 +78,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                @if(!empty($related_works))
+                </div> --}}
+                {{-- @if(!empty($related_works))
                 <div class="col-lg-12">
                     <div class="related-work-area padding-top-100">
                         <div class="section-title margin-bottom-55">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                 </div>
-                @endif
+                @endif --}}
             </div>
         </div>
     </div>
