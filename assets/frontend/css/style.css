@@ -1696,7 +1696,10 @@ section.blog-content-area.padding-120 {
     border-top: 1px solid blue;
     margin-top: -1px;
 }
-
+.navbar-area .nav-container .navbar-collapse .sub-menu li {
+    padding: 0px;
+    margin-bottom: -1px;
+}
 select#title {
     display: block !important;
 }
