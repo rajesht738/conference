@@ -35,7 +35,7 @@
                         <div class="post-description">
                             {!! $work_item->key_dates !!}
                         </div>
-                        @php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; @endphp
+                        {{-- @php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; @endphp
                         @if(!empty($gallery_item))
                             <div class="case-study-gallery-wrapper margin-bottom-30 margin-top-40">
                                 <h2 class="main-title margin-bottom-30">{{get_static_option('work_single_page_'.$user_select_lang_slug.'_gallery_title')}}</h2>
@@ -47,7 +47,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                        @endif
+                        @endif --}}
                     </div>
                 </div>
                 {{-- <div class="col-lg-4">
