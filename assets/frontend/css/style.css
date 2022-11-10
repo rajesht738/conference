@@ -1685,11 +1685,12 @@ section.blog-content-area.padding-120 {
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li {
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     line-height: 50px;
     border-left: 1px solid #c9ab72;
     padding: 0px 12px;
+    margin-top: 2px;
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li:hover {
@@ -1954,6 +1955,7 @@ section#footerTop li > a {
         line-height: 30px;
         padding: 10px 0;
         border-bottom: 1px solid #e2e2e2;
+        
     }
 
     .navbar-area .nav-container .navbar-collapse .navbar-nav li:hover {
