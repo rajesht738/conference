@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    {{-- <section id="footerTop">   --}}
+    <section id="footerTop">  
 
         <div class="container">
         <div class="row" style="padding:25px;">
@@ -94,5 +94,6 @@
             </div>
           
         </div>
-      </div></section>
+      </div>
+    </section>
 @endsection
