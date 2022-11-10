@@ -27,7 +27,7 @@
     <div class="work-details-content-area padding-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="portfolio-details-item">
                         <div class="thumb">
                             {{-- {!! render_image_markup_by_attachment_id($work_item->image,'','large') !!} --}}
@@ -35,7 +35,7 @@
                         <div class="post-description">
                             {!! $work_item->sponsherships !!}
                         </div>
-                        @php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; @endphp
+                        {{-- @php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; @endphp
                         @if(!empty($gallery_item))
                             <div class="case-study-gallery-wrapper margin-bottom-30 margin-top-40">
                                 <h2 class="main-title margin-bottom-30">{{get_static_option('work_single_page_'.$user_select_lang_slug.'_gallery_title')}}</h2>
@@ -47,10 +47,10 @@
                                     @endforeach
                                 </div>
                             </div>
-                        @endif
+                        @endif --}}
                     </div>
                 </div>
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
                     <div class="project-widget">
                         <div class="project-info-item">
                             <h4 class="title">{{get_static_option('work_single_page_'.$user_select_lang_slug.'_sidebar_title')}}</h4>
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 @if(!empty($related_works))
                 <div class="col-lg-12">
                     <div class="related-work-area padding-top-100">
