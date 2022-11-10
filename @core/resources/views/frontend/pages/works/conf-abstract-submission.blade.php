@@ -24,7 +24,7 @@
     <li><a target="_blank" href="{{route('admin.work.edit',$work_item->id)}}"><i class="far fa-edit"></i> {{__('Edit Works')}}</a></li>
 @endsection --}}
 @section('content')
-    {{-- <div class="work-details-content-area padding-120">
+    <div class="work-details-content-area padding-120" style="display: none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -49,7 +49,7 @@
                             </div>
                         @endif
                     </div>
-                {{-- </div>
+                </div>
                 <div class="col-lg-4">
                     <div class="project-widget">
                         <div class="project-info-item">
@@ -80,8 +80,8 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
-  {{--  </div> --}}
+        </div>
+    </div>
     <section class="order-service-page-content-area padding-100">
         <div class="container">
             {{-- <div class="row">
