@@ -85,8 +85,8 @@
                                 <p class="banner-text" data-animation="fadeInUp" data-delay="1.0s">{{ $work_item->clients }} <br>
                                     {{ $work_item->start_date }}  to {{ $work_item->end_date }} </p>
                                 <div class="banner-btn one" data-animation="fadeInUp" data-delay="1.2s">
-                                   <a class="theme-btn red" href="#">Final Programm<i class="fal fa-arrow-alt-right"></i></a>
-                                   <a class="theme-btn yellow" href="#">Submit Presentation <i class="fal fa-arrow-alt-right"></i></a>
+                                   <a class="theme-btn red" href="http://conf.micropowersystem.org/conferences/{{$work_item->slug}}/key-dates">Final Programm<i class="fal fa-arrow-alt-right"></i></a>
+                                   <a class="theme-btn yellow" href="http://conf.micropowersystem.org/conferences/{{$work_item->slug}}/abstract-submission">Submit Presentation <i class="fal fa-arrow-alt-right"></i></a>
                                 </div>
                              </div>
                           </div>
@@ -237,7 +237,7 @@ color: lightseagreen;">
                 <p class="lead font-weight-light text-400">Once you submit the abstract, we will get in touch with you in 4-5 business days regarding the status (Accepted/Rejected) of the submission. If you do not hear back from us, please contact at: 
                 <a href="mailto:contact@biocoreconferences.com" style="color:#fff;text-transform:lowercase">contact@biocoreconferences.com
                 </a></p>
-                <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="/conferences/abstract-submission" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now</a>
+                <a class="btn btn-lg btn-danger rounded-capsule mt-4" href="http://conf.micropowersystem.org/conferences/biotech2021/abstract-submission" title="Closed!" data-fancyscroll="data-fancyscroll">Submit now</a>
               </div>
             </div>
         </div>
