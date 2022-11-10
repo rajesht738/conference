@@ -1700,6 +1700,9 @@ section.blog-content-area.padding-120 {
     padding: 0px;
     margin-bottom: -1px;
 }
+section#conf-topic h4 {
+    color: white;
+}
 select#title {
     display: block !important;
 }
