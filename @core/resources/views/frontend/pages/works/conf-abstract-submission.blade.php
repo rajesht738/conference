@@ -49,7 +49,7 @@
                             </div>
                         @endif
                     </div>
-                </div>
+                {{-- </div>
                 <div class="col-lg-4">
                     <div class="project-widget">
                         <div class="project-info-item">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
   {{--  </div> --}}
     <section class="order-service-page-content-area padding-100">
         <div class="container">
