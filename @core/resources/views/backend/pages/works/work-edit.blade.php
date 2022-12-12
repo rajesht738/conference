@@ -107,6 +107,11 @@
                                 <input type="hidden" name="venue" id="venue" value="{{ $work_item->venue }}">
                                 <div class="summernote">{!! $work_item->venue !!}</div>
                             </div>
+                           <div class="form-group">
+                                <label for="venue">Our Generals</label>
+                                <input type="hidden" name="our_generals" id="our_generals" value="{{ $work_item->our_generals }}">
+                                <div class="summernote">{!! $work_item->our_generals !!}</div>
+                            </div>
                             <div class="form-group">
                                 <label for="location">Location</label>
                                 <input type="text" class="form-control" id="clients" name="clients"

@@ -73,18 +73,10 @@
                                         <div class="content">
                                             <h5 class="title">Office:</h5>
                                             <p class=""
-                                                style="
-                                        padding: 0px !important;
-                                        margin: 0;
-                                        font-size: 14px;
-                                    ">
+                                                style="padding: 0px !important;margin: 0;font-size: 13px;font-weight: 700;color: gray;">
                                                 98z St. Paul St, N1 7DZ, </p>
                                             <p class=""
-                                                style="
-                                        padding: 0px !important;
-                                        margin: 0;
-                                        font-size: 14px;
-                                    ">
+                                            style="padding: 0px !important;margin: 0;font-size: 13px;font-weight: 700;color: gray;">
                                                 Hackney, London, United Kingdom.</p>
 
                                         </div>

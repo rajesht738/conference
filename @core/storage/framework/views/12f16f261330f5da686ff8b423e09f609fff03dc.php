@@ -48,10 +48,16 @@
                                 <input type="text" class="form-control"  name="slug" placeholder="<?php echo e(__('Slug')); ?>">
                             </div>
                             <div class="form-group">
+                                <label for="notice">Notice Board</label>
+                                <input type="hidden" name="notice" id="notice" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
                                 <label for="description"><?php echo e(__('Description')); ?></label>
                                 <input type="hidden" name="description" id="description" >
                                 <div class="summernote"></div>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="why_do_attend">Why do attend?</label>
                                 <input type="hidden" name="why_do_attend" id="why_do_attend" >
@@ -88,6 +94,11 @@
                                 <div class="summernote"></div>
                             </div>
                             <div class="form-group">
+                                <label for="our_generals">Our Journals</label>
+                                <input type="hidden" name="our_generals" id="our_generals" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
                                 <label for="location">Location</label>
                                 <input type="text" class="form-control"  id="location"  name="clients" placeholder="<?php echo e(__('Clients')); ?>">
                             </div>
@@ -118,7 +129,19 @@
                                 <textarea name="meta_description"  class="form-control" rows="5" id="meta_description"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="image"><?php echo e(__('Image')); ?></label>
+                                <label for="image">Banner Image</label>
+                                <div class="media-upload-btn-wrapper">
+                                    <div class="img-wrap"></div>
+                                    <input type="hidden" name="banner_image">
+                                    <button type="button" class="btn btn-info media_upload_form_btn" data-btntitle="Select Work Image" data-modaltitle="Upload Work Image" data-toggle="modal" data-target="#media_upload_modal">
+                                        <?php echo e(__('Upload Image')); ?>
+
+                                    </button>
+                                </div>
+                                <small><?php echo e(__('Recommended image size 1920x1280')); ?></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Thumb Image</label>
                                 <div class="media-upload-btn-wrapper">
                                     <div class="img-wrap"></div>
                                     <input type="hidden" name="image">

@@ -20,6 +20,7 @@ class Works extends Model
         'conference_topics',
         'key_dates',
         'sponsherships',
+        'our_generals',
         'ocm',
         'venue',
         'image',

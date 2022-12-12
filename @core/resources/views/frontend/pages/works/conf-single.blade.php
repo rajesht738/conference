@@ -117,13 +117,13 @@ color: lightseagreen;">
 </div>
 </section>
     <div class="work-details-content-area ">
-        <section id="conf-sponsherships-wrapper">
+        {{-- <section id="conf-sponsherships-wrapper">
         <div class="row">
             <div class="col-lg-12 conf-sponsherships">
                 {!! $work_item->sponsherships !!}
             </div>
         </div>
-        </section>
+        </section> --}}
         <section id="conf-team">
        
         <div class="row">
@@ -195,6 +195,16 @@ color: lightseagreen;">
             </div>
         </div>
         </section>
+        <section id="conf-glimps">
+       
+        <div class="row">
+            <div class="container">
+                <h3 style="color: #fff;
+                padding-bottom: 20px;">Glimpse of  {!! $work_item->title !!}</h3>   
+               {!! $work_item->sponsherships !!}
+            </div>
+        </div>
+        </section>
 
 
     <section id="conf-why-we-attend">
@@ -232,7 +242,7 @@ color: lightseagreen;">
     <section id="conf-submitAbstract">
         <div class="row">
             <div class="container sumitAbstractWrapper">
-              <div class="col-xl-7 col-lg-9 text-center">
+              <div class="col-xl-9 col-lg-9 text-center">
                 <h3 class="mb-3 ls text-white fs-md-2 fs-lg-3">Submit Your Abstract</h3>
                 <p class="lead font-weight-light text-400">All submitted conference papers will be blind peer reviewed by three competent reviewers. The conference proceedings book, certificate of presentation will be distributed to the conference participants at the venue during conference dates. The post-conference proceedings will be abstracted and indexed in the respective Biocore Journals and submitted to be indexed in the Google Scholar, J-Gate, and ICMJE. Each abstract will receive a DOI provided by Cross Ref. The registration fee includes the publication of one accepted paper of up to 6 pages in the conference proceeding. : 
                 <a href="mailto:contact@biocoreconferences.com" style="color:#fff;text-transform:lowercase">contact@biocoreconferences.com
@@ -312,15 +322,15 @@ color: lightseagreen;">
 
         <div class="container">
         <div class="row" style="padding:25px;">
-            <div class="col-md-9 px-2">
-            	<h3 class="text-white mb-4">About Organizer</h3>
+            <div class="col-md-12 px-2">
+            	<h3 class="text-white mb-4">Our Journals </h3>
                   <div class="row">
                     <div class="col-md-12 px-2">
                       <div class="ui accordion ml-2">
                         <div class="title active text-400 font-weight-bold" style="display:none;"><i class="dropdown icon"></i> MEET THE EXPERTS</div>
                         <div class="content active ml-4 text-200 mt-0">
                           <p class="transition visible" style="display: block !important;">
-                            {!! $work_item->description !!}</p>
+                            {!! $work_item->our_generals !!}</p>
                         
                         </div>
                         
@@ -328,7 +338,7 @@ color: lightseagreen;">
                     </div>
                   </div>
             </div>
-            <div class="col-md-3 px-0">
+            {{-- <div class="col-md-3 px-0">
             	<div class="col-lg-12 mt-4 mt-lg-0 d-flex flex-column justify-content-between">
                   <div class="row mb-5">
                     <div class="col-md-12 col-md-6 border-400 pr-md-4">
@@ -350,7 +360,7 @@ color: lightseagreen;">
                   </div>
                   <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.561343955882!2d-77.55907528468641!3d37.636004879784906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b1154a27b1fed9%3A0x99bd352721aefc71!2s3400%20Copper%20Mill%20Trace%2C%20Richmond%2C%20VA%2023294%2C%20USA!5e0!3m2!1sen!2sin!4v1575607761281!5m2!1sen!2sin" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>-->
                 </div>
-            </div>
+            </div> --}}
           
         </div>
       </div>

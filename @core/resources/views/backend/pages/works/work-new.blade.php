@@ -95,6 +95,11 @@
                                 <div class="summernote"></div>
                             </div>
                             <div class="form-group">
+                                <label for="our_generals">Our Journals</label>
+                                <input type="hidden" name="our_generals" id="our_generals" >
+                                <div class="summernote"></div>
+                            </div>
+                            <div class="form-group">
                                 <label for="location">Location</label>
                                 <input type="text" class="form-control"  id="location"  name="clients" placeholder="{{__('Clients')}}">
                             </div>

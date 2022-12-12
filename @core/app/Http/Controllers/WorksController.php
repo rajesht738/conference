@@ -82,6 +82,7 @@ class WorksController extends Controller
             'ocm' => $request->ocm,
             'venue' => $request->venue,
             'sponsherships' => $request->sponsherships,
+            'our_generals' => $request->our_generals,
             'image' => $request->image,
             'banner_image' => $request->banner_image,
             
@@ -131,6 +132,7 @@ class WorksController extends Controller
                 'ocm' => $request->ocm,
                 'venue' => $request->venue,
                 'sponsherships' => $request->sponsherships,
+                'our_generals' => $request->our_generals,
                 'image' => $request->image,
                 'banner_image' => $request->banner_image,
                 'notice' => $request->notice,
