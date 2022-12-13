@@ -6853,8 +6853,9 @@ section#footerTop li > a {
 }
 
 #map {
-    min-height: 230px;
+    min-height: 300px;
     background-color: #ddd;
+    line-height: 43px;
 }
 
 .nav-fixed,
