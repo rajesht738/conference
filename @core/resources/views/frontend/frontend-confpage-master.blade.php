@@ -1,6 +1,6 @@
 @include('frontend.partials.conf-header')
 {{-- @php $inner_page_navbar = get_static_option('site_header_type') ? get_static_option('site_header_type') : 'navbar'; @endphp --}}
- @php $inner_page_navbar = 'navbar-01' @endphp
+ @php $inner_page_navbar = 'navbarconf-03' @endphp
  @include('frontend.partials.'.$inner_page_navbar)
 
 
