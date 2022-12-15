@@ -25,37 +25,7 @@
             {{ __('Edit Works') }}</a></li>
 @endsection
 @section('slider')
-    {{-- <div class="row">
-        <div class="col-lg-12 col-md-12">
-            @php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; @endphp
-            @if (!empty($gallery_item))
-                <div class="case-study-gallery-wrapper margin-bottom-30 margin-top-40">
-                    <div class="case-study-gallery-carousel owl-carousel">
 
-                        @foreach ($gallery_item as $gall)
-                            <div class="single-gallery-item">
-                                <div id="slideButton"
-                                    style="position: absolute;
-                                z-index: 1;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                width: 100%;
-                                height: 100%;
-                                gap: 5px;
-                                ">
-                                    <button class="btn btn-boxed btn-primary">Final Programm 2022</button>
-                                    <button class="btn btn-boxed btn-primary">Submit Abstract</button>
-                                </div>
-                                {!! render_image_markup_by_attachment_id($gall) !!}
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            @endif
-
-        </div>
-    </div> --}}
     <!-- banner area start  -->
     <div class="banner-area banner-area1 pos-rel">
         <div class="swiper-container slider__active">
@@ -65,21 +35,15 @@
                 @endphp
                 @if (!empty($gallery_item))
                     @foreach ($gallery_item as $gall)
-                        {{-- dd($gall); --}}
-                        <div class="swiper-slide" data-background="{!! render_image_markup_by_attachment_id($gall) !!}">
-                            <div
-                                class="single-banner single-banner-1 banner-overlay-1 banner-835 d-flex align-items-center pos-rel">
-                                <div class="banner-bg banner-bg1 banner-bg1-1" data-background="">
-                                    {!! render_image_markup_by_attachment_id($gall) !!}
+                  
+            <div class="swiper-slide" data-background="{!! render_image_markup_by_attachment_id($gall) !!}">
+             <div class="single-banner single-banner-1 banner-overlay-1 banner-835 d-flex align-items-center pos-rel">
+                <div class="banner-bg banner-bg1 banner-bg1-1" data-background>
+                  {!! render_image_markup_by_attachment_id($gall) !!}
                                 </div>
                                 <div class="container pos-rel">
                                     <div class="row align-items-center"
-                                        style="
-                        display: flex;
-                        text-align: center;
-                        justify-content: center;
-                        flex-direction: column;
-                    ">
+                                        style="display: flex;text-align: center; justify-content: center;    flex-direction: column;">
                                         <div class="col-xl-6 col-lg-7 col-md-8">
                                             <div class="banner-content banner-content1 banner-content1-1 pt-40">
 
@@ -211,68 +175,78 @@ color: lightseagreen;">
                 <div class="container">
                     <h3 style="color: #fff;
                 padding-bottom: 20px;">Glimpse of {!! $work_item->title !!}</h3>
-                         <div class="col-lg-12">
-                           
-                                <div class="section-title margin-bottom-55">
-                                    <h2 class="title"></h2>
+                    <div class="col-lg-12">
+
+                        <div class="section-title margin-bottom-55">
+                            <h2 class="title"></h2>
+                        </div>
+                        <div class="case-study-gallery-carousel owl-carousel">
+
+                            <div class="single-gallery-item">
+                                <div class="thumb">
+                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
+
+                                    <img alt=""
+                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/21670840924.JPG"
+                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/21670840924.JPG">
+
                                 </div>
-                                <div class="case-study-gallery-carousel owl-carousel">
-                                 
-                                      <div class="single-gallery-item">
-                                            <div class="thumb">
-                                                {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-                                         
-                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/21670840924.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/21670840924.JPG"> 
-                                      
-                                        </div>
-                                       
-                                        </div>
-                                        <div class="single-work-item">
-                                            <div class="thumb">
-                                                {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-                                         
-                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG"> 
-                                      
-                                        </div>
-                                        
-                                        </div>
-                                        <div class="single-work-item">
-                                            <div class="thumb">
-                                                {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-                                         
-                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/11670840913.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/11670840913.JPG"> 
-                                      
-                                        </div>
-                                          
-                                        </div>
-                                        <div class="single-work-item">
-                                            <div class="thumb">
-                                                {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-                                         
-                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/61670840902.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/61670840902.JPG"> 
-                                      
-                                        </div>
-                                     
-                                        </div>
-                                        <div class="single-work-item">
-                                            <div class="thumb">
-                                                {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-                                         
-                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/41670840897.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/41670840897.JPG"> 
-                                      
-                                        </div>
-                                     
-                                        </div>
-                                 
+
+                            </div>
+                            <div class="single-work-item">
+                                <div class="thumb">
+                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
+
+                                    <img alt=""
+                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG"
+                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG">
+
                                 </div>
-                              
+
+                            </div>
+                            <div class="single-work-item">
+                                <div class="thumb">
+                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
+
+                                    <img alt=""
+                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/11670840913.JPG"
+                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/11670840913.JPG">
+
+                                </div>
+
+                            </div>
+                            <div class="single-work-item">
+                                <div class="thumb">
+                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
+
+                                    <img alt=""
+                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/61670840902.JPG"
+                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/61670840902.JPG">
+
+                                </div>
+
+                            </div>
+                            <div class="single-work-item">
+                                <div class="thumb">
+                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
+
+                                    <img alt=""
+                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/41670840897.JPG"
+                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/41670840897.JPG">
+
+                                </div>
+
+                            </div>
+
                         </div>
 
-                     
+                    </div>
+
+
                 </div>
             </div>
         </section>
-      
+
 
         <section id="conf-why-we-attend">
             <div class="container">
