@@ -229,7 +229,8 @@ ol li:before {
     body {
         margin: 0;
     }
-    .col-lg-4.col-md-6{
+
+    .col-lg-4.col-md-6 {
         text-align: center;
     }
 }
@@ -324,10 +325,12 @@ section#conf-team {
 section#conf-why-we-attend p, span {
     color: gray !important;
 }
+
 #conf-glimps {
     padding: 5%;
     background-color: rgb(0 0 0 / 82%);
 }
+
 #conf-topic {
     background-color: rgb(0 0 0 / 82%);
     padding: 5%;
@@ -338,12 +341,15 @@ section#conf-why-we-attend p, span {
     background-blend-mode: overlay;
     /* opacity: .7; */
 }
+
 .conf-sponsherships h3 {
     color: white;
 }
+
 section#conf-topic h3 {
     color: white;
 }
+
 section#conf-submitAbstract p {
     color: white;
 }
@@ -377,9 +383,11 @@ section#footerTop {
     /* opacity: .7; */
     color: white !important;
 }
+
 section#footerTop p {
     color: white;
 }
+
 /*--------------------------------------------------------------
 # Globals
 --------------------------------------------------------------*/
@@ -1545,6 +1553,11 @@ section#footerTop p {
 
 .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav {
     text-align: left;
+
+}
+
+.conf-navv {
+padding-left: 14%;
 }
 
 .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li.current-menu-item a {
@@ -1693,20 +1706,23 @@ section.blog-content-area.padding-120 {
     line-height: 50px;
     border-left: 1px solid #c9ab72;
     padding: 0px 12px;
-    
+
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li:hover {
     border-top: 1px solid blue;
     margin-top: -1px;
 }
+
 .navbar-area .nav-container .navbar-collapse .sub-menu li {
     padding: 0px;
     margin-bottom: -1px;
 }
+
 section#conf-topic h4 {
     color: white;
 }
+
 select#title {
     display: block !important;
 }
@@ -1714,9 +1730,11 @@ select#title {
 select#country {
     display: block !important;
 }
-section#footerTop li > a {
+
+section#footerTop li>a {
     text-transform: inherit;
 }
+
 .navbar-area .nav-container .navbar-collapse .navbar-nav li+li {
     margin-left: 20px;
 }
@@ -1958,7 +1976,7 @@ section#footerTop li > a {
         line-height: 30px;
         padding: 10px 0;
         border-bottom: 1px solid #e2e2e2;
-        
+
     }
 
     .navbar-area .nav-container .navbar-collapse .navbar-nav li:hover {

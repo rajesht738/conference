@@ -1,7 +1,7 @@
-const second = document.querySelector('.navbar-nav li:nth-child(4) > a');
+const second = document.querySelector('.navbar-nav  li:nth-child(4) > a');
 second.setAttribute("target", "_blank");
 
-// const third = document.querySelector('.conf-nav li:nth-child(4) > a');
+// const third = document.querySelector('.conf-navv li:nth-child(4) > a');
 // third.setAttribute("target", "_self");
 
 

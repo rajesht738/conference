@@ -107,7 +107,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
-            <ul class="navbar-nav conf-nav">
+            <ul class="navbar-nav conf-navv">
                 {{-- {!! render_menu_by_id($primary_menu_id) !!} --}}
                 {{-- {!! render_menu_by_id(34) !!} --}}
                
