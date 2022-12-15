@@ -160,12 +160,59 @@ color: lightseagreen;">
                 <div class="container">
                     <h3 style="color: #fff;
                 padding-bottom: 20px;">Glimpse of <?php echo $work_item->title; ?></h3>
-                    <?php echo $work_item->sponsherships; ?>
+                         <div class="col-lg-12">
+                           
+                                <div class="section-title margin-bottom-55">
+                                    <h2 class="title"></h2>
+                                </div>
+                                <div class="case-study-gallery-carousel owl-carousel">
+                                 
+                                      <div class="single-gallery-item">
+                                            <div class="thumb">
+                                                
+                                         
+                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG"> 
+                                      
+                                        </div>
+                                       
+                                        </div>
+                                        <div class="single-work-item">
+                                            <div class="thumb">
+                                                
+                                         
+                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG"> 
+                                      
+                                        </div>
+                                        
+                                        </div>
+                                        <div class="single-work-item">
+                                            <div class="thumb">
+                                                
+                                         
+                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG"> 
+                                      
+                                        </div>
+                                          
+                                        </div>
+                                        <div class="single-work-item">
+                                            <div class="thumb">
+                                                
+                                         
+                                           <img alt="" data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG" src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG"> 
+                                      
+                                        </div>
+                                     
+                                        </div>
+                                 
+                                </div>
+                              
+                        </div>
 
+                     
                 </div>
             </div>
         </section>
-
+      
 
         <section id="conf-why-we-attend">
             <div class="container">

@@ -111,8 +111,31 @@
         </div>
         <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
             <ul class="navbar-nav">
-                <?php echo render_menu_by_id($primary_menu_id); ?>
-
+                
+                
+               
+                 
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/what-we-are"> What we are</a>
+                </li>
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/key-dates">Key Dates</a>
+                </li>
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/ocm">OCM</a>
+                </li>
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/abstract-submission">Abstract Submission</a>
+                </li>
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/speakers">Speakers</a>
+                </li>
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/venue">Venue</a>
+                </li>
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/sponshership">Sponshership</a>
+                </li>
             </ul>
         </div>
     </div>

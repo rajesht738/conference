@@ -11,7 +11,9 @@ second.setAttribute("target", "_blank");
         /*--------------------
         *  language change
         * ------------------*/
-
+       
+ 
+            
         $(document).on('click','.selected-language',function (e){
            e.preventDefault();
            $(this).next('ul').toggleClass('show');
