@@ -42,13 +42,11 @@
                   {!! render_image_markup_by_attachment_id($gall) !!}
                                 </div>
                                 <div class="container pos-rel">
-                                    <div class="row align-items-center"
-                                        style="display: flex;text-align: center; justify-content: center;    flex-direction: column;">
+                                    <div class="row align-items-center" style="display: flex;text-align: center; justify-content: center;flex-direction: column;">
                                         <div class="col-xl-6 col-lg-7 col-md-8">
                                             <div class="banner-content banner-content1 banner-content1-1 pt-40">
 
-                                                <h1 class="banner-title white-color" data-animation="fadeInUp"
-                                                    data-delay=".8s">{{ $work_item->title }}</h1>
+                                                <h1 class="banner-title white-color" data-animation="fadeInUp"data-delay=".8s">{{ $work_item->title }}</h1>
                                                 <p class="banner-text" data-animation="fadeInUp" data-delay="1.0s">
                                                     {{ $work_item->clients }} <br>
                                                     {{ $work_item->start_date }} to {{ $work_item->end_date }} </p>
@@ -180,7 +178,7 @@ color: lightseagreen;">
                         <div class="section-title margin-bottom-55">
                             <h2 class="title"></h2>
                         </div>
-                        <div class="case-study-gallery-carousel owl-carousel">
+                     {{-- <div class="case-study-gallery-carousel owl-carousel">
 
                             <div class="single-gallery-item">
                                 <div class="thumb">
@@ -238,9 +236,9 @@ color: lightseagreen;">
 
                             </div>
 
-                        </div>
-
-                    </div>
+                        </div> 
+                        {!! $work_item->sponsherships !!}
+                    {{--</div> --}}
 
 
                 </div>

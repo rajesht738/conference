@@ -45,13 +45,11 @@
 
                                 </div>
                                 <div class="container pos-rel">
-                                    <div class="row align-items-center"
-                                        style="display: flex;text-align: center; justify-content: center;    flex-direction: column;">
+                                    <div class="row align-items-center" style="display: flex;text-align: center; justify-content: center;flex-direction: column;">
                                         <div class="col-xl-6 col-lg-7 col-md-8">
                                             <div class="banner-content banner-content1 banner-content1-1 pt-40">
 
-                                                <h1 class="banner-title white-color" data-animation="fadeInUp"
-                                                    data-delay=".8s"><?php echo e($work_item->title); ?></h1>
+                                                <h1 class="banner-title white-color" data-animation="fadeInUp"data-delay=".8s"><?php echo e($work_item->title); ?></h1>
                                                 <p class="banner-text" data-animation="fadeInUp" data-delay="1.0s">
                                                     <?php echo e($work_item->clients); ?> <br>
                                                     <?php echo e($work_item->start_date); ?> to <?php echo e($work_item->end_date); ?> </p>
@@ -159,11 +157,7 @@ color: lightseagreen;">
                         <div class="section-title margin-bottom-55">
                             <h2 class="title"></h2>
                         </div>
-                        <div class="case-study-gallery-carousel owl-carousel">
-
-                            <div class="single-gallery-item">
-                                <div class="thumb">
-                                    
+                     
 
                                     <img alt=""
                                         data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/21670840924.JPG"
@@ -217,9 +211,10 @@ color: lightseagreen;">
 
                             </div>
 
-                        </div>
+                        </div> 
+                        <?php echo $work_item->sponsherships; ?>
 
-                    </div>
+                    
 
 
                 </div>
