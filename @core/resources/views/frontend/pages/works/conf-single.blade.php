@@ -178,67 +178,9 @@ color: lightseagreen;">
                         <div class="section-title margin-bottom-55">
                             <h2 class="title"></h2>
                         </div>
-                     {{-- <div class="case-study-gallery-carousel owl-carousel">
-
-                            <div class="single-gallery-item">
-                                <div class="thumb">
-                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-
-                                    <img alt=""
-                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/21670840924.JPG"
-                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/21670840924.JPG">
-
-                                </div>
-
-                            </div>
-                            <div class="single-work-item">
-                                <div class="thumb">
-                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-
-                                    <img alt=""
-                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG"
-                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/31670840928.JPG">
-
-                                </div>
-
-                            </div>
-                            <div class="single-work-item">
-                                <div class="thumb">
-                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-
-                                    <img alt=""
-                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/11670840913.JPG"
-                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/11670840913.JPG">
-
-                                </div>
-
-                            </div>
-                            <div class="single-work-item">
-                                <div class="thumb">
-                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-
-                                    <img alt=""
-                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/61670840902.JPG"
-                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/61670840902.JPG">
-
-                                </div>
-
-                            </div>
-                            <div class="single-work-item">
-                                <div class="thumb">
-                                    {{-- {!! render_image_markup_by_attachment_id($data->image,'','grid') !!} --}}
-
-                                    <img alt=""
-                                        data-src="http://conf.micropowersystem.org/assets/uploads/media-uploader/41670840897.JPG"
-                                        src="http://conf.micropowersystem.org/assets/uploads/media-uploader/41670840897.JPG">
-
-                                </div>
-
-                            </div>
-
-                        </div> 
+                   
                         {!! $work_item->sponsherships !!}
-                    {{--</div> --}}
+                    </div>
 
 
                 </div>
