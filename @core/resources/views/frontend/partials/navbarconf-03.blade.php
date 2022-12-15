@@ -107,7 +107,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav conf-nav">
                 {{-- {!! render_menu_by_id($primary_menu_id) !!} --}}
                 {{-- {!! render_menu_by_id(34) !!} --}}
                
@@ -122,7 +122,7 @@
                     <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/ocm">OCM</a>
                 </li>
                 <li>
-                    <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/abstract-submission">Abstract Submission</a>
+                    <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/abstract-submission" target="_self">Abstract Submission</a>
                 </li>
                 <li>
                     <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/speakers">Speakers</a>

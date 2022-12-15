@@ -110,7 +110,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav conf-nav">
                 
                 
                
@@ -125,7 +125,7 @@
                     <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/ocm">OCM</a>
                 </li>
                 <li>
-                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/abstract-submission">Abstract Submission</a>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/abstract-submission" target="_self">Abstract Submission</a>
                 </li>
                 <li>
                     <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/speakers">Speakers</a>
