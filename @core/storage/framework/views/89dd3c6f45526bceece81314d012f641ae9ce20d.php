@@ -43,7 +43,7 @@
                 <div class="banner-bg banner-bg1 banner-bg1-1" data-background>
                   <?php echo render_image_markup_by_attachment_id($gall); ?>
 
-                                </div>
+                </div>
                                 <div class="container pos-rel">
                                     <div class="row align-items-center" style="display: flex;text-align: center; justify-content: center;flex-direction: column;">
                                         <div class="col-xl-6 col-lg-7 col-md-8">

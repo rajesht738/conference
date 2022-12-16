@@ -1735,6 +1735,10 @@ section#footerTop li>a {
     text-transform: inherit;
 }
 
+section#footerTop p a {
+    text-transform: capitalize;
+    font-size: 14px;
+}
 .navbar-area .nav-container .navbar-collapse .navbar-nav li+li {
     margin-left: 20px;
 }
