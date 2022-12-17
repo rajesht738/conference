@@ -1730,6 +1730,9 @@ select#title {
 select#country {
     display: block !important;
 }
+select#interestedin {
+    display: block !important;
+}
 
 section#footerTop li>a {
     text-transform: inherit;
