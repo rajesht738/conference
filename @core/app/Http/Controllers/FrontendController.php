@@ -881,6 +881,69 @@ class FrontendController extends Controller
             'all_know_about' => $all_know_about,
         ]);
     }
+    public function privacy_page()
+    {
+        $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
+        $all_counterup = Counterup::where('lang', $lang)->get();
+        $all_brand_logo = Brand::all();
+        $all_team_members = TeamMember::where('lang', $lang)->orderBy('id', 'desc')->take(4)->get();
+        $all_blog = Blog::where(['lang' => $lang, 'status' => 'publish'])->orderBy('id', 'desc')->take(9)->get();
+        $all_testimonial = Testimonial::where('lang', $lang)->get();
+        $all_know_about = KnowAbout::where('lang', $lang)->get();
+        $all_service = Services::where(['lang' => $lang, 'status' => 'publish'])->orderBy('id', 'desc')->take(4)->get();
+
+        return view('frontend.pages.privacy')->with([
+            'all_counterup' => $all_counterup,
+            'all_brand_logo' => $all_brand_logo,
+            'all_team_members' => $all_team_members,
+            'all_blog' => $all_blog,
+            'all_testimonial' => $all_testimonial,
+            'all_service' => $all_service,
+            'all_know_about' => $all_know_about,
+        ]);
+    }
+    public function term_page()
+    {
+        $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
+        $all_counterup = Counterup::where('lang', $lang)->get();
+        $all_brand_logo = Brand::all();
+        $all_team_members = TeamMember::where('lang', $lang)->orderBy('id', 'desc')->take(4)->get();
+        $all_blog = Blog::where(['lang' => $lang, 'status' => 'publish'])->orderBy('id', 'desc')->take(9)->get();
+        $all_testimonial = Testimonial::where('lang', $lang)->get();
+        $all_know_about = KnowAbout::where('lang', $lang)->get();
+        $all_service = Services::where(['lang' => $lang, 'status' => 'publish'])->orderBy('id', 'desc')->take(4)->get();
+
+        return view('frontend.pages.term-condition')->with([
+            'all_counterup' => $all_counterup,
+            'all_brand_logo' => $all_brand_logo,
+            'all_team_members' => $all_team_members,
+            'all_blog' => $all_blog,
+            'all_testimonial' => $all_testimonial,
+            'all_service' => $all_service,
+            'all_know_about' => $all_know_about,
+        ]);
+    }
+    public function cancellation_page()
+    {
+        $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default', 1)->first()->slug;
+        $all_counterup = Counterup::where('lang', $lang)->get();
+        $all_brand_logo = Brand::all();
+        $all_team_members = TeamMember::where('lang', $lang)->orderBy('id', 'desc')->take(4)->get();
+        $all_blog = Blog::where(['lang' => $lang, 'status' => 'publish'])->orderBy('id', 'desc')->take(9)->get();
+        $all_testimonial = Testimonial::where('lang', $lang)->get();
+        $all_know_about = KnowAbout::where('lang', $lang)->get();
+        $all_service = Services::where(['lang' => $lang, 'status' => 'publish'])->orderBy('id', 'desc')->take(4)->get();
+
+        return view('frontend.pages.cancellation-policy')->with([
+            'all_counterup' => $all_counterup,
+            'all_brand_logo' => $all_brand_logo,
+            'all_team_members' => $all_team_members,
+            'all_blog' => $all_blog,
+            'all_testimonial' => $all_testimonial,
+            'all_service' => $all_service,
+            'all_know_about' => $all_know_about,
+        ]);
+    }
 
     public function service_page()
     {

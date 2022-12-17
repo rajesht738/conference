@@ -314,9 +314,9 @@ color: lightseagreen;">
                                     <li> <a href="#conf-topic">Speaker Guidelines</a></li>
                                     <li><a href="http://conf.micropowersystem.org/conferences">Biocore Conferences</a></li>
                                     <li><a href="https://biocoreopen.org/" target="_blank">Biocore Journals</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms and Conditions</a></li>
-                                    <li><a href="#">Cancellation policy</a></li>
+                                    <li><a href="{{  url('') }}/privacy_policy" target="_blank">Privacy Policy</a></li>
+                                    <li><a href="{{  url('') }}/term_condition" target="_blank">Terms and Conditions</a></li>
+                                    <li><a href="{{  url('') }}/cancellation_policy" target="_blank">Cancellation policy</a></li>
                                 </ul>
                             </div>
                         @endif

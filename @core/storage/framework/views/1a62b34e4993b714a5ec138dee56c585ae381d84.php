@@ -118,23 +118,26 @@
                 <li>
                     <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/what-we-are"> What we are</a>
                 </li>
-                <li>
-                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/key-dates">Key Dates</a>
-                </li>
+               
                 <li>
                     <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/ocm">OCM</a>
                 </li>
-                <li>
-                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/abstract-submission" target="_self">Abstract Submission</a>
-                </li>
+               
                 <li>
                     <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/speakers">Speakers</a>
+                </li>
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/abstract-submission" target="_self">Abstract Submission</a>
                 </li>
                 <li>
                     <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/venue">Venue</a>
                 </li>
                 <li>
                     <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/sponshership">Sponshership</a>
+                </li>
+                <li>
+                    
+                    <a href="https://biocoreopen.org/conferences/biotech2023/online_registration.php" target="_blank">Registration</a>
                 </li>
             </ul>
         </div>

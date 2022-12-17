@@ -71,6 +71,9 @@ Route::group(['middleware' => ['setlang','globalVariable']],function (){
     Route::get('/'.$contact_page_slug,'FrontendController@contact_page')->name('frontend.contact');
     Route::get('/'.$price_plan_page_slug,'FrontendController@price_plan_page')->name('frontend.price.plan');
 
+    Route::get('/privacy_policy','FrontendController@privacy_page')->name('frontend.privacy_policy');
+    Route::get('/term_condition','FrontendController@term_page')->name('frontend.term');
+    Route::get('/cancellation_policy','FrontendController@cancellation_page')->name('frontend.cancellation');
     //image gallery
     $testimonial_page_slug = !empty(get_static_option('testimonial_page_slug')) ? get_static_option('testimonial_page_slug') : 'testimonials';
     $feedback_page_slug = !empty(get_static_option('feedback_page_slug')) ? get_static_option('feedback_page_slug') : 'feedback';
