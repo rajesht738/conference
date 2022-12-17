@@ -311,9 +311,9 @@ color: lightseagreen;">
                             <div id="map" class="col-md-5 contact_page_map">
                                 {{-- {!! render_embed_google_map(get_static_option('contact_page_map_section_address'),20) !!} --}}
                                 <ul>
-                                    <li> <a href="#">Speaker Guidelines</a></li>
-                                    <li><a href="#">Biocore Conferences</a></li>
-                                    <li><a href="#">Biocore Journals</a></li>
+                                    <li> <a href="#conf-topic">Speaker Guidelines</a></li>
+                                    <li><a href="http://conf.micropowersystem.org/conferences">Biocore Conferences</a></li>
+                                    <li><a href="https://biocoreopen.org/" target="_blank">Biocore Journals</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
                                     <li><a href="#">Terms and Conditions</a></li>
                                     <li><a href="#">Cancellation policy</a></li>
