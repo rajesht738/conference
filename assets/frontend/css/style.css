@@ -1711,7 +1711,8 @@ section.blog-content-area.padding-120 {
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li:hover {
     border-top: 1px solid blue;
-    margin-top: -7px;
+    margin-top: -1px;
+  
 }
 
 .navbar-area .nav-container .navbar-collapse .sub-menu li {
@@ -1744,6 +1745,7 @@ section#footerTop p a {
 }
 .navbar-area .nav-container .navbar-collapse .navbar-nav li+li {
     margin-left: 20px;
+    margin-top: -1px;
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.current-menu-item a {
