@@ -36,9 +36,9 @@
                 @if (!empty($gallery_item))
                     @foreach ($gallery_item as $gall)
                   
-            <div class="swiper-slide" data-background="{!! render_image_markup_by_attachment_id($gall) !!}">
+            <div class="swiper-slide" data-background="">
              <div class="single-banner single-banner-1 banner-overlay-1 banner-835 d-flex align-items-center pos-rel">
-                <div class="banner-bg banner-bg1 banner-bg1-1" data-background>
+                <div class="banner-bg banner-bg1 banner-bg1-1">
                   {!! render_image_markup_by_attachment_id($gall) !!}
                 </div>
                                 <div class="container pos-rel">
