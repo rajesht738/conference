@@ -100,8 +100,10 @@
                                 <div class="summernote"></div>
                             </div>
                             <div class="form-group">
-                                <label for="location">Location</label>
-                                <input type="text" class="form-control"  id="location"  name="clients" placeholder="{{__('Clients')}}">
+                                <label for="location">Date & Location</label>
+                                {{-- <input type="text" class="form-control"  id="location"  name="clients" placeholder="{{__('Clients')}}"> --}}
+                                <input type="hidden" name="clients" id="location" >
+                                <div class="summernote"></div>
                             </div>
                             <div class="form-group">
                                 <label for="start_date">{{__('Start Date')}}</label>

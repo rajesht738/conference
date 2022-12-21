@@ -130,7 +130,10 @@
                     <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/venue">Venue</a>
                 </li>
                 <li>
-                    <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/sponshership">Sponshership</a>
+                    <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/sponshership">Sponsorship</a>
+                </li>
+                <li>
+                    <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/#conf-topic">Guidelines</a>
                 </li>
                 <li>
                     {{-- <a href="{{  url('') }}/conferences/{{ Request::segment(2) }}/key-dates">Key Dates</a> --}}

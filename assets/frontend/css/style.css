@@ -369,7 +369,7 @@ section#conf-submitAbstract p {
 }
 
 section#contact {
-    background: white;
+    background: #ffe1e1f0;
     padding: 32px;
 }
 
@@ -387,7 +387,18 @@ section#footerTop {
 section#footerTop p {
     color: white;
 }
-
+.fa-facebook:before {
+    color: blue;
+    font-size: 22px;
+}
+.fa-twitter:before {
+    color: blue;
+    font-size: 22px;
+}
+.fa-linkedin-in:before {
+    color: blue;
+    font-size: 22px;
+}
 /*--------------------------------------------------------------
 # Globals
 --------------------------------------------------------------*/
@@ -6881,7 +6892,7 @@ section#footerTop p a {
 
 #map {
     min-height: 300px;
-    background-color: #ddd;
+    /* background-color: #ddd; */
     line-height: 43px;
 }
 

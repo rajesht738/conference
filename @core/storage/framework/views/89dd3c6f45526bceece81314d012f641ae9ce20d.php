@@ -51,8 +51,8 @@
 
                                                 <h1 class="banner-title white-color" data-animation="fadeInUp"data-delay=".8s"><?php echo e($work_item->title); ?></h1>
                                                 <p class="banner-text" data-animation="fadeInUp" data-delay="1.0s">
-                                                    <?php echo e($work_item->clients); ?> <br>
-                                                    <?php echo e($work_item->start_date); ?> to <?php echo e($work_item->end_date); ?> </p>
+                                                    <?php echo $work_item->clients; ?> <br>
+                                                    
                                                 <div class="banner-btn one" data-animation="fadeInUp" data-delay="1.2s">
                                                     <a class="theme-btn yellow"
                                                         href="http://conf.micropowersystem.org/conferences/<?php echo e($work_item->slug); ?>/abstract-submission">Submit
@@ -76,22 +76,7 @@
     <!-- banner area end  -->
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
-    <section id="conf-new padding-120" style="background: white;
-color: lightseagreen;">
-        <div class="row">
-            <div class="container">
-                <div class="alert alert-light alert-dismissible fade show sticky-kit shadow-sm rounded-0 mb-0"
-                    role="alert" style="">
-                    <div class="row justify-content-center">
-                        <?php echo $work_item->notice; ?>
-
-                    </div>
-                    <button class="close mt-md-2" type="button" data-dismiss="alert" aria-label="Close"><span
-                            aria-hidden="true">×</span></button>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <div class="work-details-content-area ">
         
         <section id="conf-team">
@@ -173,7 +158,7 @@ color: lightseagreen;">
                 <div class="row">
                     <div class="col-lg-6 conf-about">
                         <div class="portfolio-details-item">
-                            <h3 style="">About Us</h3>
+                            <h3 style="">Welcome Message</h3>
                             <div class="post-description">
                                 <?php echo $work_item->description; ?>
 
@@ -197,6 +182,7 @@ color: lightseagreen;">
             <div class="container">
                 <?php echo $work_item->conference_topics; ?>
 
+                
                 <hr style="border-top: 2px solid yellow;">
             </div>
 
@@ -213,7 +199,7 @@ color: lightseagreen;">
                         proceedings will be abstracted and indexed in the respective Biocore Journals and submitted to be
                         indexed in the Google Scholar, J-Gate, and ICMJE. Each abstract will receive a DOI provided by Cross
                         Ref. The registration fee includes the publication of one accepted paper of up to 6 pages in the
-                        conference proceeding. :
+                        conference proceeding.
                         <a href="mailto:contact@biocoreconferences.com"
                             style="color:#fff;text-transform:lowercase">contact@biocoreconferences.com
                         </a>
@@ -267,27 +253,36 @@ color: lightseagreen;">
                             
                             
                             
-                            <li class="my-1"><span class="fa-li pr-2" style="left: -1em; position: unset;"><i
-                                        class="fab fa-facebook"></i></span><a href="https://facebook.com">Facebook</a>
-                            </li>
-                            <li><span class="fa-li pr-2" style="left: -1em; position: unset;"><i
-                                        class="fab fa-twitter"></i></span><a href="https://twitter.com/vaccinesummitdc"
-                                    target="_blank">Twitter </a></li>
-                            <li><span class="fa-li pr-2" style="left: -1em; position: unset;"><i
-                                        class="fab fa-linkedin-in"></i></span><a
-                                    href="https://twitter.com/vaccinesummitdc" target="_blank">Linkdin </a></li>
+                            <li class="my-1">
+                                <span class="fa-li pr-2" style="left: -1em; position: unset;">
+                                    <i class="fab fa-facebook"></i></span>
+                                    <a href="https://facebook.com">Facebook</a>
+                              </li>
+                            <li class="my-1">
+                                <span class="fa-li pr-2" style="left: -1em; position: unset;">
+                                    <i class="fab fa-twitter"></i></span>
+                                        <a href="https://twitter.com/vaccinesummitdc"
+                                    target="_blank">Twitter </a>
+                                </li>
+                            <li class="my-1">
+                                <span class="fa-li pr-2" style="left: -1em; position: unset;">
+                                    <i class="fab fa-linkedin-in"></i></span>
+                                    <a href="https://twitter.com/vaccinesummitdc"
+                                     target="_blank">Linkdin </a>
+                                </li>
 
                         </div>
                         <?php if(get_static_option('contact_page_google_map_section_status') == 'on'): ?>
                             <div id="map" class="col-md-5 contact_page_map">
                                 
-                                <ul>
-                                    <li> <a href="#conf-topic">Speaker Guidelines</a></li>
-                                    <li><a href="http://conf.micropowersystem.org/conferences">Biocore Conferences</a></li>
-                                    <li><a href="https://biocoreopen.org/" target="_blank">Biocore Journals</a></li>
-                                    <li><a href="<?php echo e(url('')); ?>/privacy_policy" target="_blank">Privacy Policy</a></li>
-                                    <li><a href="<?php echo e(url('')); ?>/term_condition" target="_blank">Terms and Conditions</a></li>
-                                    <li><a href="<?php echo e(url('')); ?>/cancellation_policy" target="_blank">Cancellation policy</a></li>
+                                <h3>Quick Links</h3> 
+                                <ul style="list-style-type: square !important;">
+                                    <li style="list-style: inherit;">  <a href="#conf-topic">Speaker Guidelines</a></li>
+                                    <li style="list-style: inherit;"><a href="http://conf.micropowersystem.org/conferences">Biocore Conferences</a></li>
+                                    <li style="list-style: inherit;"><a href="https://biocoreopen.org/" target="_blank">Biocore Journals</a></li>
+                                    <li style="list-style: inherit;"><a href="<?php echo e(url('')); ?>/privacy_policy" target="_blank">Privacy Policy</a></li>
+                                    <li style="list-style: inherit;"><a href="<?php echo e(url('')); ?>/term_condition" target="_blank">Terms and Conditions</a></li>
+                                    <li style="list-style: inherit;"><a href="<?php echo e(url('')); ?>/cancellation_policy" target="_blank">Cancellation policy</a></li>
                                 </ul>
                             </div>
                         <?php endif; ?>
@@ -346,7 +341,7 @@ color: lightseagreen;">
                                                 </path>
                                             </svg><!-- <i class="fas fa-phone"></i> --></span><a
                                             href="tel:3212853144">+1-321-2853144</a></li>
-                                    <li><span class="fa-li pr-2"><svg class="svg-inline--fa fa-envelope fa-w-16"
+                                    <li class="mb-2"><span class="fa-li pr-2"><svg class="svg-inline--fa fa-envelope fa-w-16"
                                                 aria-hidden="true" data-prefix="fas" data-icon="envelope" role="img"
                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                                 data-fa-i2svg="">
@@ -358,7 +353,7 @@ color: lightseagreen;">
                                             style="text-transform: lowercase;">contact@biocoreconferences.com</a>
                                     </li>
                                     </li>
-                                    <li><span class="fa-li pr-2"><svg class="svg-inline--fa fa-linkedin-in fa-w-14"
+                                    <li class="mb-2"><span class="fa-li pr-2"><svg class="svg-inline--fa fa-linkedin-in fa-w-14"
                                                 aria-hidden="true" data-prefix="fab" data-icon="linkedin-in"
                                                 role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                                                 data-fa-i2svg="">
@@ -366,7 +361,8 @@ color: lightseagreen;">
                                                     d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z">
                                                 </path>
                                             </svg><!-- <i class="fab fa-linkedin-in"></i> --></span><a
-                                            href="https://www.linkedin.com/in/" target="_blank">Linkedin</a></li>
+                                            href="https://www.linkedin.com/in/" target="_blank">Linkedin</a>
+                                        </li>
                                     
 
                                 </ul>

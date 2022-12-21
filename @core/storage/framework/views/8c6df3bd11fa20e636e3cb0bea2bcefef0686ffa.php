@@ -113,10 +113,12 @@
                                 <div class="summernote"><?php echo $work_item->our_generals; ?></div>
                             </div>
                             <div class="form-group">
-                                <label for="location">Location</label>
-                                <input type="text" class="form-control" id="clients" name="clients"
+                                <label for="location">Date & Location </label>
+                                
+                                    <input type="hidden" name="clients" id="clients"
                                     value="<?php echo e($work_item->clients); ?>">
-                            </div>
+                                <div class="summernote"><?php echo $work_item->clients; ?></div>
+                                </div>
                             <div class="form-group">
                                 <label for="start_date"><?php echo e(__('Start Date')); ?></label>
                                 <input type="date" class="form-control" id="start_date" name="start_date"

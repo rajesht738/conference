@@ -28,7 +28,7 @@
     <div class="work-details-content-area padding-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="portfolio-details-item">
                         <div class="thumb">
                             
@@ -37,52 +37,10 @@
                             <?php echo $work_item->sponsherships; ?>
 
                         </div>
-                        <?php $gallery_item = $work_item->gallery ? explode('|',$work_item->gallery) : []; ?>
-                        <?php if(!empty($gallery_item)): ?>
-                            <div class="case-study-gallery-wrapper margin-bottom-30 margin-top-40">
-                                <h2 class="main-title margin-bottom-30"><?php echo e(get_static_option('work_single_page_'.$user_select_lang_slug.'_gallery_title')); ?></h2>
-                                <div class="case-study-gallery-carousel owl-carousel">
-                                    <?php $__currentLoopData = $gallery_item; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gall): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <div class="single-gallery-item">
-                                            <?php echo render_image_markup_by_attachment_id($gall); ?>
-
-                                        </div>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </div>
-                            </div>
-                        <?php endif; ?>
+                        
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="project-widget">
-                        <div class="project-info-item">
-                            <h4 class="title"><?php echo e(get_static_option('work_single_page_'.$user_select_lang_slug.'_sidebar_title')); ?></h4>
-                            <ul>
-                                <li><?php echo e(get_static_option('work_single_page_'.$user_select_lang_slug.'_start_date_text')); ?> <span class="right"><?php echo e($work_item->start_date); ?> </span></li>
-                                <li><?php echo e(get_static_option('work_single_page_'.$user_select_lang_slug.'_end_date_text')); ?> <span class="right"> <?php echo e($work_item->end_date); ?></span></li>
-                                <li><?php echo e(get_static_option('work_single_page_'.$user_select_lang_slug.'_clients_text')); ?> <span class="right"><?php echo e($work_item->clients); ?> </span></li>
-                                <li><?php echo e(get_static_option('work_single_page_'.$user_select_lang_slug.'_category_text')); ?> <span class="right">
-                                         <?php
-                                             $all_cat_of_post = get_work_category_by_id($work_item->id);
-                                         ?>
-                                        <?php if(!empty($all_cat_of_post)): ?>
-                                        <?php $__currentLoopData = $all_cat_of_post; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $work_cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <a href="<?php echo e(route('frontend.works.category',['id' => $key,'any'=> Str::slug($work_cat)])); ?>"><?php echo e($work_cat); ?></a>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                        <?php endif; ?>
-                                    </span>
-                                </li>
-                            </ul>
-                            <div class="share-area">
-                                <h4 class="title"><?php echo e(get_static_option('work_single_page_'.$user_select_lang_slug.'_share_text')); ?></h4>
-                                <ul class="share-icon">
-                                    <?php echo single_post_share(route('frontend.work.single',$work_item->slug),$work_item->title,get_attachment_image_url_by_id($work_item->image)); ?>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <?php if(!empty($related_works)): ?>
                 <div class="col-lg-12">
                     <div class="related-work-area padding-top-100">

@@ -133,7 +133,10 @@
                     <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/venue">Venue</a>
                 </li>
                 <li>
-                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/sponshership">Sponshership</a>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/sponshership">Sponsorship</a>
+                </li>
+                <li>
+                    <a href="<?php echo e(url('')); ?>/conferences/<?php echo e(Request::segment(2)); ?>/#conf-topic">Guidelines</a>
                 </li>
                 <li>
                     

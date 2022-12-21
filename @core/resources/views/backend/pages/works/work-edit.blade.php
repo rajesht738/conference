@@ -113,10 +113,13 @@
                                 <div class="summernote">{!! $work_item->our_generals !!}</div>
                             </div>
                             <div class="form-group">
-                                <label for="location">Location</label>
-                                <input type="text" class="form-control" id="clients" name="clients"
+                                <label for="location">Date & Location </label>
+                                {{-- <input type="text" class="form-control" id="clients" name="clients"
+                                    value="{{ $work_item->clients }}"> --}}
+                                    <input type="hidden" name="clients" id="clients"
                                     value="{{ $work_item->clients }}">
-                            </div>
+                                <div class="summernote">{!! $work_item->clients !!}</div>
+                                </div>
                             <div class="form-group">
                                 <label for="start_date">{{ __('Start Date') }}</label>
                                 <input type="date" class="form-control" id="start_date" name="start_date"
