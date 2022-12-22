@@ -38,8 +38,9 @@
                         <div class="swiper-slide">
                             <div
                                 class="single-banner single-banner-1 banner-overlay-1 banner-835 d-flex align-items-center pos-rel">
-                                <div class="banner-bg banner-bg1 banner-bg1-1">
-                                    {!! render_image_markup_by_attachment_id($gall) !!}
+                                <div class="banner-bg banner-bg1 banner-bg1-1" data-background="{!! render_image_url_by_attachment_id($gall) !!}">
+                                    {{-- {!! render_image_markup_by_attachment_id($gall) !!} --}}
+                                   
                                 </div>
                                 <div class="container pos-rel">
                                     <div class="row align-items-center"

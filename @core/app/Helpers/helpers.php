@@ -677,7 +677,18 @@ function render_image_markup_by_attachment_id($id, $class = null, $size = 'full'
     }
     return $output;
 }
+function render_image_url_by_attachment_id($id, $class = null, $size = 'full')
+{
+    if (empty($id)) return '';
+    $output = '';
 
+    $image_details = get_attachment_image_by_id($id, $size);
+    if (!empty($image_details)) {
+        $class_list = !empty($class) ? 'class="' . $class . '"' : '';
+        $output = $image_details['img_url'];
+    }
+    return $output;
+}
 function render_background_image_markup_by_attachment_id($id, $size = 'full')
 {
     if (empty($id)) return '';
