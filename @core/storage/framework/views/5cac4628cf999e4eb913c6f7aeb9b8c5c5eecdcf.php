@@ -103,8 +103,9 @@
                                                 </path>
                                             </svg><!-- <i class="fas fa-phone"></i> --></span><a
                                             href="tel:3212853144">+1-321-2853144</a></li>
-                                    <li><span class="fa-li pr-2"><svg class="svg-inline--fa fa-envelope fa-w-16"
-                                                aria-hidden="true" data-prefix="fas" data-icon="envelope" role="img"
+                                    <li class="mb-2"><span class="fa-li pr-2"><svg
+                                                class="svg-inline--fa fa-envelope fa-w-16" aria-hidden="true"
+                                                data-prefix="fas" data-icon="envelope" role="img"
                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                                 data-fa-i2svg="">
                                                 <path fill="currentColor"
@@ -115,15 +116,17 @@
                                             style="text-transform: lowercase;">contact@biocoreconferences.com</a>
                                     </li>
                                     </li>
-                                    <li><span class="fa-li pr-2"><svg class="svg-inline--fa fa-linkedin-in fa-w-14"
-                                                aria-hidden="true" data-prefix="fab" data-icon="linkedin-in"
-                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                    <li class="mb-2"><span class="fa-li pr-2"><svg
+                                                class="svg-inline--fa fa-linkedin-in fa-w-14" aria-hidden="true"
+                                                data-prefix="fab" data-icon="linkedin-in" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                                                 data-fa-i2svg="">
                                                 <path fill="currentColor"
                                                     d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z">
                                                 </path>
                                             </svg><!-- <i class="fab fa-linkedin-in"></i> --></span><a
-                                            href="https://www.linkedin.com/in/" target="_blank">Linkedin</a></li>
+                                            href="https://www.linkedin.com/in/" target="_blank">Linkedin</a>
+                                    </li>
                                     
 
                                 </ul>

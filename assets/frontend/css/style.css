@@ -387,15 +387,15 @@ section#footerTop {
 section#footerTop p {
     color: white;
 }
-.fa-facebook:before {
+section#contact .fa-facebook:before {
     color: blue;
     font-size: 22px;
 }
-.fa-twitter:before {
+section#contact .fa-twitter:before {
     color: blue;
     font-size: 22px;
 }
-.fa-linkedin-in:before {
+section#contact .fa-linkedin-in:before {
     color: blue;
     font-size: 22px;
 }

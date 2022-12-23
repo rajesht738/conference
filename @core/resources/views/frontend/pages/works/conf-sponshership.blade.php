@@ -14,7 +14,7 @@
     {{get_static_option('work_page_'.$user_select_lang_slug.'_name')}}: {{$work_item->title}}
 @endsection
 @section('breadcrumb')
-    <li>Sponsherships</li>
+    <li>Sponsorships</li>
 @endsection
 @section('meta-tags')
     <meta name="description" content="{{$work_item->meta_tags}}">
